@@ -46,23 +46,26 @@ function getAgentesInfo() {
     });
 }
 
-// flowUbicacion
-const flowUbicacion = addKeyword(EVENTS.ACTION) // Se eliminan las palabras clave
-    .addAnswer('📍 Ubicación - UBM Viajes y Turismo:')
-    .addAnswer(
-        '📌 Dean Funes 345, Ciudad de Salta, Argentina',
-        { capture: false }
-    )
-    .addAnswer(
-        '🕒 *Horario de atención*: \n\nDe lunes a viernes de 10:00 a 17:00 🕑',
-        { capture: false }
-    )
-    .addAnswer(
-        '🌍 Hace click acá para usar el GPS: (https://bit.ly/3BfW49P)', // Enlace acortado
-        { capture: false }
-    )
-    .addAnswer('🔄 Si deseas volver al menú, por favor escribe *Menu*.');
 
+
+
+// flowUbicacion
+const flowUbicacion = addKeyword(EVENTS.ACTION)
+    .addAction(async (ctx, { flowDynamic }) => {
+        try {
+            // Ruta al archivo ubicacion.txt
+            const ubicacionPath = path.join(__dirname, 'mensajes', 'ubicacion.txt');
+
+            // Leer el contenido del archivo de manera síncrona
+            const ubicacionContent = fs.readFileSync(ubicacionPath, 'utf8');
+
+            // Enviar el contenido como un solo mensaje
+            await flowDynamic(ubicacionContent);
+        } catch (error) {
+            console.error('Error al leer ubicacion.txt:', error);
+            await flowDynamic('Lo siento, hubo un problema para obtener la información de ubicación.');
+        }
+    });
 
 
 

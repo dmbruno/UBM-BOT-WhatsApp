@@ -1,0 +1,232 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A56A739D0066C52A54D',
+    participant: undefined
+  },
+  messageTimestamp: 1727183241,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  verifiedBizName: '',
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_06fa472a-5d6a-4707-8443-21bcf1cc6c4e',
+  keyword: 'key_284d831e-bbe2-4c28-8ac8-ae813148bc54',
+  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
+    '\n' +
+    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
+    '\n' +
+    '2️⃣ *Promociones y Ofertas*  \n' +
+    '   Aprovecha nuestras ofertas exclusivas y descuentos especiales 🎉🤑\n' +
+    '\n' +
+    '3️⃣ *Hablar con un Agente*  \n' +
+    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
+    '\n' +
+    '4️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
+    '\n' +
+    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
+    '\n',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7c00402380e29833d754fd8f23eab3ba'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A1564E7FF4BC653966A',
+    participant: undefined
+  },
+  messageTimestamp: 1727183245,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '4',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '4',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7C3A9643690966F62A',
+    participant: undefined
+  },
+  messageTimestamp: 1727183291,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_06fa472a-5d6a-4707-8443-21bcf1cc6c4e',
+  keyword: 'key_284d831e-bbe2-4c28-8ac8-ae813148bc54',
+  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
+    '\n' +
+    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
+    '\n' +
+    '2️⃣ *Promociones y Ofertas*  \n' +
+    '   Aprovecha nuestras ofertas exclusivas y descuentos especiales 🎉🤑\n' +
+    '\n' +
+    '3️⃣ *Hablar con un Agente*  \n' +
+    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
+    '\n' +
+    '4️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
+    '\n' +
+    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
+    '\n',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7c00402380e29833d754fd8f23eab3ba'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A2EE5E078D92D5EFBEA',
+    participant: undefined
+  },
+  messageTimestamp: 1727183293,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '4',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '4',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A2BE23982ED039FC4AF',
+    participant: undefined
+  },
+  messageTimestamp: 1727183310,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_06fa472a-5d6a-4707-8443-21bcf1cc6c4e',
+  keyword: 'key_284d831e-bbe2-4c28-8ac8-ae813148bc54',
+  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
+    '\n' +
+    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
+    '\n' +
+    '2️⃣ *Promociones y Ofertas*  \n' +
+    '   Aprovecha nuestras ofertas exclusivas y descuentos especiales 🎉🤑\n' +
+    '\n' +
+    '3️⃣ *Hablar con un Agente*  \n' +
+    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
+    '\n' +
+    '4️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
+    '\n' +
+    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
+    '\n',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7c00402380e29833d754fd8f23eab3ba'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A73977B0BB6B0122F37',
+    participant: undefined
+  },
+  messageTimestamp: 1727183313,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '4',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '4',
+  from: '5493875051112'
+}
