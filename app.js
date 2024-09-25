@@ -291,7 +291,7 @@ const flowPromos = addKeyword(EVENTS.ACTION)
     
 
 // Menú inicial
-const menuFlow = addKeyword("Menu", 'menu').addAnswer(
+const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
     menu,
     { capture: true },
     async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
