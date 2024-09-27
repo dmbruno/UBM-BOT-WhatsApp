@@ -285,6 +285,9 @@ const flowPromos = addKeyword(EVENTS.ACTION)
         media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_EUROPA_Y_MEDIO_ORIENTE_EUROPA_CON_TOWER_SALE_INFO.jpg?t=1724944561",
         delay: 500  // 0.5 segundos de retraso
     })
+    .addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
+        delay: 500  // 0.5 segundos de retraso
+    })
     .addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
         delay: 500  // 0.5 segundos de retraso
     });
