@@ -273,24 +273,24 @@ const flowConsultas = addKeyword(EVENTS.ACTION)
 
 
 // Promociones
-const flowPromos = addKeyword(EVENTS.ACTION)
-    .addAnswer("🌴 *Promociones en el Caribe* 🌴", {
-        media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_PALLADIUM_2025_INFO.jpg?t=1724944561",
-    })
-    .addAnswer("🌴 *Promociones en el Caribe* 🌴", {
-        media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_CARIBE_INFO.jpg?t=1724944561",
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🌍 *Promociones en Europa* 🌍", {
-        media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_EUROPA_Y_MEDIO_ORIENTE_EUROPA_CON_TOWER_SALE_INFO.jpg?t=1724944561",
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
-        delay: 500  // 0.5 segundos de retraso
-    });
+//const flowPromos = addKeyword(EVENTS.ACTION)
+    //.addAnswer("🌴 *Promociones en el Caribe* 🌴", {
+        //media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_PALLADIUM_2025_INFO.jpg?t=1724944561",
+    //})
+    //.addAnswer("🌴 *Promociones en el Caribe* 🌴", {
+       // media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_CARIBE_INFO.jpg?t=1724944561",
+        //delay: 500  // 0.5 segundos de retraso
+    //})
+    //.addAnswer("🌍 *Promociones en Europa* 🌍", {
+       // media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_EUROPA_Y_MEDIO_ORIENTE_EUROPA_CON_TOWER_SALE_INFO.jpg?t=1724944561",
+        //delay: 500  // 0.5 segundos de retraso
+    //})
+    //.addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
+        //delay: 500  // 0.5 segundos de retraso
+    //})
+    //.addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
+        //delay: 500  // 0.5 segundos de retraso
+    //});
     
 
 // Menú inicial
@@ -306,16 +306,16 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
         switch (ctx.body.trim()) {
             case "1":
                 return gotoFlow(flowConsultas);
+            //case "2":
+                //return gotoFlow(flowPromos);
             case "2":
-                return gotoFlow(flowPromos);
-            case "3":
                 try {
                     const agentesInfo = await getAgentesInfo();
                     return await flowDynamic(`${agentesInfo}`);
                 } catch (error) {
                     return await flowDynamic(error);
                 }
-                case "4":
+                case "3":
                 return gotoFlow(flowUbicacion);
             case "0":
                 return await flowDynamic(
