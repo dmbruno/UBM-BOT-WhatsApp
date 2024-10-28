@@ -328,7 +328,7 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
 // Iniciar el bot
 const main = async () => {
     const adapterDB = new MockAdapter();
-    const adapterFlow = createFlow([flowPrincipal, menuFlow, flowConsultas, flowPromos, flowUbicacion]);
+    const adapterFlow = createFlow([flowPrincipal, menuFlow, flowConsultas, flowUbicacion]);
     const adapterProvider = createProvider(BaileysProvider);
 
     createBot({
