@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A38A1739D3142E0D65F',
+    id: '3A43ADA00A38C11B1D3F',
     participant: undefined
   },
-  messageTimestamp: 1730122703,
+  messageTimestamp: 1730232137,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -20,8 +20,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_7e8e3596-d043-47ca-9990-08ccc4006b4c',
-  keyword: 'key_bfabb6f5-8666-4b03-bab5-14730822690e',
+  ref: 'ans_808f091f-ab94-457f-8029-dbb14a17b521',
+  keyword: 'key_e0f61512-2ee3-4c3e-8ea9-5a652262edde',
   answer: '¡Hola! 👋 Soy el BOT de la Agencia 👋 Bienvenido a UBM - Viajes y Turismo. ¿En qué podemos ayudarte hoy?',
   options: {
     media: null,
@@ -35,11 +35,11 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'bff2d7112d92a0af7a0fb358f04545fc'
+  refSerialize: 'ac6b0a35d6f16f9ef80b9b6f5db64467'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_3b6b1fd0-ac9d-4690-b06e-92f812f628f7',
-  keyword: 'ans_7e8e3596-d043-47ca-9990-08ccc4006b4c',
+  ref: 'ans_273d1957-a6f1-4f20-8f66-fc00e5678709',
+  keyword: 'ans_808f091f-ab94-457f-8029-dbb14a17b521',
   answer: 'Escribe *Menu* para más opciones',
   options: {
     media: null,
@@ -53,16 +53,16 @@
     keyword: {},
     callback: false
   },
-  refSerialize: '984f09334cae3f02738f28c25a64ce6a'
+  refSerialize: 'af7166bc730247d0c82096c499ea1c87'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3ADB010E75307A7D533E',
+    id: '3A93622588817108FF94',
     participant: undefined
   },
-  messageTimestamp: 1730122706,
+  messageTimestamp: 1730232139,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -77,8 +77,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_e6d60157-a3f8-4efe-90d4-5d1c65ecc7b6',
-  keyword: 'key_4a9bb8ec-82ee-4e17-9264-9bbb218ed12e',
+  ref: 'ans_f16a3f1c-7ebc-403e-83af-116eee819f61',
+  keyword: 'key_3bcf35da-ed21-44c2-9ebc-d1ccd2fcfbf5',
   answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
     '\n' +
     'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
@@ -91,6 +91,10 @@
     '\n' +
     '3️⃣ *Consultar la Ubicación*  \n' +
     '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
+    '\n' +
+    '4️⃣ *Promociones*  \n' +
+    '   Aprovecha nuestras ofertas y promociones exclusivas 🎉💼\n' +
+    '\n' +
     '\n' +
     '\n' +
     'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
@@ -107,473 +111,26 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '543a64b3103f71663b087b9053a94897'
+  refSerialize: 'bfcbf599495864672ce875eb545594f6'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A989512113ED200246E',
+    id: '3A00C08901C53271D29D',
     participant: undefined
   },
-  messageTimestamp: 1730122714,
+  messageTimestamp: 1730232143,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '2',
+    conversation: '4',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '2',
+  body: '4',
   from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A94EC4C21E62740193D',
-    participant: undefined
-  },
-  messageTimestamp: 1730122718,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_e6d60157-a3f8-4efe-90d4-5d1c65ecc7b6',
-  keyword: 'key_4a9bb8ec-82ee-4e17-9264-9bbb218ed12e',
-  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
-    '\n' +
-    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
-    '\n' +
-    '2️⃣ *Hablar con un Agente*  \n' +
-    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
-    '\n' +
-    '3️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
-    '\n' +
-    '\n' +
-    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
-    '\n',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '543a64b3103f71663b087b9053a94897'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3ADB9EDB0E994B0D9DF4',
-    participant: undefined
-  },
-  messageTimestamp: 1730122720,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '3',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '3',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AA992E5F9D99A7F5F9D',
-    participant: undefined
-  },
-  messageTimestamp: 1730122726,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_e6d60157-a3f8-4efe-90d4-5d1c65ecc7b6',
-  keyword: 'key_4a9bb8ec-82ee-4e17-9264-9bbb218ed12e',
-  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
-    '\n' +
-    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
-    '\n' +
-    '2️⃣ *Hablar con un Agente*  \n' +
-    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
-    '\n' +
-    '3️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
-    '\n' +
-    '\n' +
-    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
-    '\n',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '543a64b3103f71663b087b9053a94897'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A9DCDE8332DA9832564',
-    participant: undefined
-  },
-  messageTimestamp: 1730122728,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '1',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A5BB18081FBA02E1080',
-    participant: undefined
-  },
-  messageTimestamp: 1730122750,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '2 y 2',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '2 y 2',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_6971f3fa-ed21-46d1-92d9-345add7c1d0e',
-  keyword: 'ans_885ce377-9090-4e69-9b28-3a05db9be049',
-  answer: '📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ej: Enero, Febrero, etc.)',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'd35938536c567811db2028c0bdf6ec35'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A1F45BAB7D42B4F1395',
-    participant: undefined
-  },
-  messageTimestamp: 1730122754,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'enero',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'enero',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_42b6e8e3-2a1a-447a-9384-eb5c1cc5806a',
-  keyword: 'ans_6971f3fa-ed21-46d1-92d9-345add7c1d0e',
-  answer: '⏳ ¿Cuántos días te gustaría viajar aproximadamente?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'f53c6f9954411d0e68e6b69e86db5aca'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AA872A04425BF5DF084',
-    participant: undefined
-  },
-  messageTimestamp: 1730122756,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '10',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '10',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_169f306d-ca1b-4bad-8177-5e0d80fc266b',
-  keyword: 'ans_42b6e8e3-2a1a-447a-9384-eb5c1cc5806a',
-  answer: '🏨 ¿Qué tipo de servicio prefieres?\n' +
-    '\n' +
-    '1️⃣ All inclusive\n' +
-    '2️⃣ Solo desayuno\n' +
-    '3️⃣ Ambos combinados',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '6e7d9559a03da67f13eac79d59e6c7e5'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A5F11E32B76A1782228',
-    participant: undefined
-  },
-  messageTimestamp: 1730122759,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '1',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_d27c7f9c-f4db-47e3-ac21-881a9c3d4341',
-  keyword: 'ans_169f306d-ca1b-4bad-8177-5e0d80fc266b',
-  answer: '🌍 ¿Cuál es tu destino preferido? ¿Y si tienes una segunda opción?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'd4e27fcccfe9ec18f7b68f173a9bb327'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A45B0D709A5F247A02E',
-    participant: undefined
-  },
-  messageTimestamp: 1730122764,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'brasi',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'brasi',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_fb080a43-163a-4ee0-b477-774d78d10e86',
-  keyword: 'ans_d27c7f9c-f4db-47e3-ac21-881a9c3d4341',
-  answer: '🚫 ¿Hay algún lugar que no te gustaría visitar?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '55e216bc895466e8048e7f31be2c9edd'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A2ABA317B055F709A0E',
-    participant: undefined
-  },
-  messageTimestamp: 1730122767,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'no',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'no',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_613ba91e-0d60-4bc5-b194-48b1b733dda4',
-  keyword: 'ans_fb080a43-163a-4ee0-b477-774d78d10e86',
-  answer: '📧 Por último, ¿podrías proporcionarnos tu correo electrónico para ponernos en contacto contigo?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '0ad0825232c2e28fc008cc8699fab2f6'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AD02741E1ADEB67EC36',
-    participant: undefined
-  },
-  messageTimestamp: 1730122773,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'diego@gmail.com',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'diego@gmail.com',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_27d01d62-9d87-4936-8f0e-ab843438053d',
-  keyword: 'ans_613ba91e-0d60-4bc5-b194-48b1b733dda4',
-  answer: '📄 Gracias por toda la información. A continuación, te mostramos un resumen de tu cotización:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '8d47fa3f6acb55e3f411ad440d090a07'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_44709f3f-6896-4d21-854a-21d3720560a4',
-  keyword: 'ans_27d01d62-9d87-4936-8f0e-ab843438053d',
-  answer: '✨ Nuestros agentes estarán contactándote en breve para finalizar la cotización. ¡Gracias por elegirnos!\n' +
-    '\n' +
-    '🔄 Si deseas volver al menú, por favor escribe *Menu*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: '08e2d18c0b4d421d6e45951b67e32a0c'
 }

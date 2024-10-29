@@ -23,7 +23,7 @@ const menu = fs.readFileSync(menuPath, "utf-8");
 
 
 // Mensaje de Bienvenida
-const flowPrincipal = addKeyword(['hola', 'hello','quiero','buenas', 'buenos dias', 'buenos días'])
+const flowPrincipal = addKeyword(['hola', 'hello', 'quiero', 'buenas', 'buenos dias', 'buenos días'])
     .addAnswer('¡Hola! 👋 Soy el BOT de la Agencia 👋 Bienvenido a UBM - Viajes y Turismo. ¿En qué podemos ayudarte hoy?')
     .addAnswer('Escribe *Menu* para más opciones');
 
@@ -273,25 +273,25 @@ const flowConsultas = addKeyword(EVENTS.ACTION)
 
 
 // Promociones
-//const flowPromos = addKeyword(EVENTS.ACTION)
-    //.addAnswer("🌴 *Promociones en el Caribe* 🌴", {
-        //media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_PALLADIUM_2025_INFO.jpg?t=1724944561",
-    //})
-    //.addAnswer("🌴 *Promociones en el Caribe* 🌴", {
-       // media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_CARIBE_TOWER_SALE_CARIBE_INFO.jpg?t=1724944561",
-        //delay: 500  // 0.5 segundos de retraso
-    //})
-    //.addAnswer("🌍 *Promociones en Europa* 🌍", {
-       // media: "https://www.towertravel.com.ar/web/upfiles/flyers/DESTINOS_EUROPA_Y_MEDIO_ORIENTE_EUROPA_CON_TOWER_SALE_INFO.jpg?t=1724944561",
-        //delay: 500  // 0.5 segundos de retraso
-    //})
-    //.addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
-        //delay: 500  // 0.5 segundos de retraso
-    //})
-    //.addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
-        //delay: 500  // 0.5 segundos de retraso
-    //});
-    
+const flowPromos = addKeyword(EVENTS.ACTION)
+    .addAnswer("🌴 *Promo Uruguay y Brasil * 🌴", {
+        media: "https://drive.google.com/uc?export=view&id=1jE4k4PYY87PlaUlbZemUJpTbFSFHQ7rQ",
+    })
+    .addAnswer("🌴 *Promo Maceió* 🌴", {
+        media: "https://drive.google.com/uc?export=view&id=1CMrBaIZwj06UHa7kqOAj-1Qfroa-aqsi",
+        delay: 500  // 0.5 segundos de retraso
+    })
+    .addAnswer("🌍 *Promo Costa Mujeres* 🌍", {
+        media: "https://drive.google.com/uc?export=view&id=1m7oD6GJXSU8v7qOQyh8NQlKrm2oakiXr",
+        delay: 500  // 0.5 segundos de retraso
+    })
+    .addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
+        delay: 500  // 0.5 segundos de retraso
+    })
+    .addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
+        delay: 500  // 0.5 segundos de retraso
+    });
+
 
 // Menú inicial
 const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
@@ -306,8 +306,7 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
         switch (ctx.body.trim()) {
             case "1":
                 return gotoFlow(flowConsultas);
-            //case "2":
-                //return gotoFlow(flowPromos);
+
             case "2":
                 try {
                     const agentesInfo = await getAgentesInfo();
@@ -315,8 +314,10 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
                 } catch (error) {
                     return await flowDynamic(error);
                 }
-                case "3":
+            case "3":
                 return gotoFlow(flowUbicacion);
+            case "4":
+                return gotoFlow(flowPromos);
             case "0":
                 return await flowDynamic(
                     "Saliendo... Puedes volver a acceder a este menú escribiendo '*Menu*'"
@@ -328,7 +329,7 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
 // Iniciar el bot
 const main = async () => {
     const adapterDB = new MockAdapter();
-    const adapterFlow = createFlow([flowPrincipal, menuFlow, flowConsultas, flowUbicacion]);
+    const adapterFlow = createFlow([flowPrincipal, menuFlow, flowPromos, flowConsultas, flowUbicacion]);
     const adapterProvider = createProvider(BaileysProvider);
 
     createBot({
