@@ -274,14 +274,14 @@ const flowConsultas = addKeyword(EVENTS.ACTION)
 
 // Promociones
 const flowPromos = addKeyword(EVENTS.ACTION)
-    .addAnswer("🌴 *Promo Uruguay y Brasil * 🌴", {
+    .addAnswer("🌍*Promo Uruguay y Brasil* 🌴", {
         media: "https://drive.google.com/uc?export=view&id=1jE4k4PYY87PlaUlbZemUJpTbFSFHQ7rQ",
     })
-    .addAnswer("🌴 *Promo Maceió* 🌴", {
+    .addAnswer("🌍*Promo Maceió* 🌴", {
         media: "https://drive.google.com/uc?export=view&id=1CMrBaIZwj06UHa7kqOAj-1Qfroa-aqsi",
         delay: 500  // 0.5 segundos de retraso
     })
-    .addAnswer("🌍 *Promo Costa Mujeres* 🌍", {
+    .addAnswer("🌍*Promo Costa Mujeres* 🌴", {
         media: "https://drive.google.com/uc?export=view&id=1m7oD6GJXSU8v7qOQyh8NQlKrm2oakiXr",
         delay: 500  // 0.5 segundos de retraso
     })
