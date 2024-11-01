@@ -23,9 +23,9 @@ const menu = fs.readFileSync(menuPath, "utf-8");
 
 
 // Mensaje de Bienvenida
-const flowPrincipal = addKeyword(['hola', 'hello', 'quiero', 'buenas', 'buenos dias', 'buenos días'])
-    .addAnswer('¡Hola! 👋 Soy el BOT de la Agencia 👋 Bienvenido a UBM - Viajes y Turismo. ¿En qué podemos ayudarte hoy?')
-    .addAnswer('Escribe *Menu* para más opciones');
+const flowPrincipal = addKeyword(['hola', 'hello', 'quiero', 'buenas','info', 'buenos dias', 'buenos días'])
+    .addAnswer('¡Hola! 👋 Soy el 🤖 de *UBM VIAJES Y TURISMO*. En qué podemos ayudarte hoy❓')
+    .addAnswer('Escribe *Menu* para explorar las opciones disponibles.');
 
 
 

@@ -1,6 +1,7 @@
-🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍
+🌍 *Menú Principal* 🌍
+🤖 *UBM VIJAES Y TURISMO*
 
-Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:
+En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:
 
 1️⃣ *Quiero una cotización*  
    Descubre los mejores destinos para tus próximas vacaciones 🌴✈️
@@ -16,5 +17,5 @@ Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy?
 
 
 
-Escribe el número de la opción que te interesa, y te ayudaremos con gusto.
+✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.
 
