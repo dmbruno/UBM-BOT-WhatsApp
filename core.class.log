@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A43ADA00A38C11B1D3F',
+    id: '3A0DFD8E7A05A608FD83',
     participant: undefined
   },
-  messageTimestamp: 1730232137,
+  messageTimestamp: 1731333903,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -20,9 +20,9 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_808f091f-ab94-457f-8029-dbb14a17b521',
-  keyword: 'key_e0f61512-2ee3-4c3e-8ea9-5a652262edde',
-  answer: '¡Hola! 👋 Soy el BOT de la Agencia 👋 Bienvenido a UBM - Viajes y Turismo. ¿En qué podemos ayudarte hoy?',
+  ref: 'ans_3137441e-d4d4-46d3-9b3a-bfe9f1110f15',
+  keyword: 'key_b8e6f540-ab62-4dc8-bd8f-84f0be476dec',
+  answer: '¡Hola! 👋 Soy el 🤖 de *UBM VIAJES Y TURISMO*. En qué podemos ayudarte hoy❓',
   options: {
     media: null,
     buttons: [],
@@ -35,12 +35,12 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'ac6b0a35d6f16f9ef80b9b6f5db64467'
+  refSerialize: 'f530ce070d10e327b86a01b1c6d66272'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_273d1957-a6f1-4f20-8f66-fc00e5678709',
-  keyword: 'ans_808f091f-ab94-457f-8029-dbb14a17b521',
-  answer: 'Escribe *Menu* para más opciones',
+  ref: 'ans_f1ca61d5-0521-4f55-a7c1-294b5cba2023',
+  keyword: 'ans_3137441e-d4d4-46d3-9b3a-bfe9f1110f15',
+  answer: 'Escribe *Menu* para explorar las opciones disponibles.',
   options: {
     media: null,
     buttons: [],
@@ -53,84 +53,5 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'af7166bc730247d0c82096c499ea1c87'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A93622588817108FF94',
-    participant: undefined
-  },
-  messageTimestamp: 1730232139,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_f16a3f1c-7ebc-403e-83af-116eee819f61',
-  keyword: 'key_3bcf35da-ed21-44c2-9ebc-d1ccd2fcfbf5',
-  answer: '🌍 *UBM - Viajes y Turismo  - Menú Principal* 🌍\n' +
-    '\n' +
-    'Hola 👋, gracias por comunicarte con nosotros. ¿En qué podemos ayudarte hoy? Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️\n' +
-    '\n' +
-    '2️⃣ *Hablar con un Agente*  \n' +
-    '   ¿Necesitas asistencia? Habla directamente con uno de nuestros agentes 👨‍💼👩‍💼\n' +
-    '\n' +
-    '3️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢\n' +
-    '\n' +
-    '4️⃣ *Promociones*  \n' +
-    '   Aprovecha nuestras ofertas y promociones exclusivas 🎉💼\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    'Escribe el número de la opción que te interesa, y te ayudaremos con gusto.\n' +
-    '\n',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'bfcbf599495864672ce875eb545594f6'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A00C08901C53271D29D',
-    participant: undefined
-  },
-  messageTimestamp: 1730232143,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '4',
-  from: '5493875051112'
+  refSerialize: 'cd25cf566f6a7b69e4435c7bc7dc9091'
 }
