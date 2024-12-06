@@ -278,7 +278,7 @@ const flowPromos = addKeyword(EVENTS.ACTION)
         media: "https://drive.google.com/uc?export=view&id=1jE4k4PYY87PlaUlbZemUJpTbFSFHQ7rQ",
     })
     .addAnswer("🌍 *Promo EUROPA* 🌴", {
-        media: "https://drive.google.com/file/d/1Lstf5WrFosj_4fGUWwDIa0zhyt6wceAW/view?usp=sharing",
+        media: "https://drive.google.com/uc?export=view&id=1Lstf5WrFosj_4fGUWwDIa0zhyt6wceAW",
         delay: 500  // 0.5 segundos de retraso
     })
     .addAnswer("🌍 *Promo Costa Mujeres* 🌴", {
