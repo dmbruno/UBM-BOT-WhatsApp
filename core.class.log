@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A2E6DCE08D54E7CC199',
+    id: '3A04E0F36479D573AEE6',
     participant: undefined
   },
-  messageTimestamp: 1738190538,
+  messageTimestamp: 1738191692,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -21,8 +21,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_42abeaa4-d624-405c-bd7a-e93ff29ab71d',
-  keyword: 'key_9a15c5b3-2d51-4cb9-affc-0978c5e9704b',
+  ref: 'ans_09e671d9-d86d-4e23-9277-491613552e9a',
+  keyword: 'key_9039543b-4ce9-4276-9c5d-4bd8835efde5',
   answer: '__call_action__',
   options: {
     media: null,
@@ -36,136 +36,58 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '62d6b821b7acf8d37598c4709d0b1075'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_f7900afc-1cbf-4e82-9fef-68535f008fd5',
-  keyword: 'ans_42abeaa4-d624-405c-bd7a-e93ff29ab71d',
-  answer: '✏️ Escribe tu *nombre completo*:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '73685c4f86c8cc3f4d74ddbb0bd15b1d'
+  refSerialize: 'ef116fd4043b3fc5a6332d2752fbf6d2'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3ACF468B1A1235BD2342',
+    id: '3A9FB607048AD675C319',
     participant: undefined
   },
-  messageTimestamp: 1738190545,
+  messageTimestamp: 1738191707,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'Diego Bruno',
+    conversation: '7',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'Diego Bruno',
+  body: '7',
   from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_b41e9e75-fa85-4b8d-89cb-c8730c08f033',
-  keyword: 'ans_f7900afc-1cbf-4e82-9fef-68535f008fd5',
-  answer: '✉️ Escribe tu *correo electrónico*:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'ec1575d6ab2baed091a1046c6e83fd6e'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3AB7576D0C3885E65CBD',
+    id: '3A5112C79EC973225333',
     participant: undefined
   },
-  messageTimestamp: 1738190551,
+  messageTimestamp: 1738191711,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'dmbruno61@gmail.com',
+    conversation: '4',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'dmbruno61@gmail.com',
+  body: '4',
   from: '5493875051112'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A7F8D00BA98CBE279CF',
+    id: '3A4DE37140822CA066A5',
     participant: undefined
   },
-  messageTimestamp: 1738190557,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '5',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '5',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3ACA8E2720E150020D79',
-    participant: undefined
-  },
-  messageTimestamp: 1738190561,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '1',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A88AA68BB4BA22E3463',
-    participant: undefined
-  },
-  messageTimestamp: 1738190571,
+  messageTimestamp: 1738191721,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -179,32 +101,14 @@
   body: 'si',
   from: '5493875051112'
 }
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_2f7a6c8b-92d4-4123-abc0-100198284b8c',
-  keyword: 'ans_55cd5d66-95ba-415c-89f4-dc5396770c8e',
-  answer: '✨Si necesitas algo más, escribe *menu* para volver al inicio.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '9d6381dbe4d780335de74adbab112dff'
-}
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A78486DDED1BBF81785',
+    id: '3A380B7A93337992AA9E',
     participant: undefined
   },
-  messageTimestamp: 1738190575,
+  messageTimestamp: 1738191726,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -219,8 +123,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
-  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
   answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
     '\n' +
     '1️⃣ *Usuarios*\n' +
@@ -240,16 +144,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A8E6FAA1700EC6D1313',
+    id: '3A5CD1F35AB68EC89572',
     participant: undefined
   },
-  messageTimestamp: 1738190578,
+  messageTimestamp: 1738191728,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -267,10 +171,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A1C37309C285AD7461C',
+    id: '3AD9AF6C621430E0ADB2',
     participant: undefined
   },
-  messageTimestamp: 1738190581,
+  messageTimestamp: 1738191732,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -285,8 +189,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
-  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
   answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
     '\n' +
     '1️⃣ *Usuarios*\n' +
@@ -306,16 +210,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3AFF89882D2EB066F99C',
+    id: '3AFFEF46939E00CF2814',
     participant: undefined
   },
-  messageTimestamp: 1738190583,
+  messageTimestamp: 1738191734,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -333,10 +237,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3ADF21EBD5E92BA1FB15',
+    id: '3A84AB6A8042943BA7C5',
     participant: undefined
   },
-  messageTimestamp: 1738190586,
+  messageTimestamp: 1738191738,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -351,8 +255,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
-  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
   answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
     '\n' +
     '1️⃣ *Usuarios*\n' +
@@ -372,16 +276,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A8C4B7280426EB2CA7F',
+    id: '3A9B1AE5A6D90894061D',
     participant: undefined
   },
-  messageTimestamp: 1738190588,
+  messageTimestamp: 1738191740,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -399,10 +303,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A6803EA431764DA4DCA',
+    id: '3AD392707CE72C5E960E',
     participant: undefined
   },
-  messageTimestamp: 1738190591,
+  messageTimestamp: 1738191750,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -417,8 +321,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_14886c40-8e19-43cb-a23e-df5602919ac7',
-  keyword: 'key_16814ef0-281e-4535-b42c-f119b2e8cbbc',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
   answer: '🌍 *Menú Principal* 🌍  \n' +
     '🤖 *UBM VIAJES Y TURISMO*\n' +
     '\n' +
@@ -458,16 +362,123 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'e55476454a482fede74b3afb60c9d0e2'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A0995AFD53BC8066C19',
+    id: '3A02BE16D9A5913F39C8',
     participant: undefined
   },
-  messageTimestamp: 1738190593,
+  messageTimestamp: 1738191756,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AAD0AC1F66C1F957CFD',
+    participant: undefined
+  },
+  messageTimestamp: 1738191759,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A5A43578D7E36EEDA22',
+    participant: undefined
+  },
+  messageTimestamp: 1738191761,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AE1BABCBEE03AD05A76',
+    participant: undefined
+  },
+  messageTimestamp: 1738191764,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -485,27 +496,74 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3AF760518BFFA11A704A',
+    id: '3A511EA9C54267F6907F',
     participant: undefined
   },
-  messageTimestamp: 1738190596,
+  messageTimestamp: 1738191771,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '2 y 2',
+    conversation: 'si',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '2 y 2',
+  body: 'si',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A53065E48C71AB8415A',
+    participant: undefined
+  },
+  messageTimestamp: 1738191806,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_475f42dd-d265-4d43-83ab-a63b9379db85',
-  keyword: 'ans_e7f38417-7e37-4e58-ac71-d35d7ba63471',
-  answer: '📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ejemplo: Enero, Febrero, etc.)',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
@@ -518,33 +576,122 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'a252f31ba59867710c491e3cf361a52e'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A73AB08AB201B7F47E3',
+    id: '3AE1FAD477E42E62C157',
     participant: undefined
   },
-  messageTimestamp: 1738190600,
+  messageTimestamp: 1738191809,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'marzo',
+    conversation: '3',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'marzo',
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ADF61956EAA474B5FA0',
+    participant: undefined
+  },
+  messageTimestamp: 1738191812,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AC868765485F286AB48',
+    participant: undefined
+  },
+  messageTimestamp: 1738191821,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A3D01318D516927B7D2',
+    participant: undefined
+  },
+  messageTimestamp: 1738191825,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_4e4e51c9-6051-4dda-aa0e-13d7faadcb5e',
-  keyword: 'ans_475f42dd-d265-4d43-83ab-a63b9379db85',
-  answer: '⏳ ¿Cuántos días te gustaría viajar aproximadamente?',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
@@ -557,33 +704,101 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '1544327d181526193099e07f9fd8f3ba'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A4B5A66111EE812870D',
+    id: '3A181389908D9818DDDC',
     participant: undefined
   },
-  messageTimestamp: 1738190602,
+  messageTimestamp: 1738191827,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '15',
+    conversation: '4',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '15',
+  body: '4',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ACB9A8D623FEB791120',
+    participant: undefined
+  },
+  messageTimestamp: 1738191839,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A3CCCA6B4FC1261BDA6',
+    participant: undefined
+  },
+  messageTimestamp: 1738191843,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_89e48ece-c089-4b24-ae36-dbe8fc09c0f7',
-  keyword: 'ans_4e4e51c9-6051-4dda-aa0e-13d7faadcb5e',
-  answer: '🌍 ¿Cuál es tu destino preferido? ¿Tienes una segunda opción?',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
@@ -596,37 +811,126 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'b617d5743b07250affc192c1cca7994a'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3AEA153AEAEACE1B975F',
+    id: '3AC5CB1ADA61D264C5E5',
     participant: undefined
   },
-  messageTimestamp: 1738190605,
+  messageTimestamp: 1738191845,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'bolivia',
+    conversation: '5',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'bolivia',
+  body: '5',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ACE8502F10326359760',
+    participant: undefined
+  },
+  messageTimestamp: 1738191849,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7F3CC984947F832494',
+    participant: undefined
+  },
+  messageTimestamp: 1738191867,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'no',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'no',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A4A6C4CD5F912AEF1D4',
+    participant: undefined
+  },
+  messageTimestamp: 1738191869,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_38d44e63-19f3-48e3-a9d8-75e6ba4eead3',
-  keyword: 'ans_89e48ece-c089-4b24-ae36-dbe8fc09c0f7',
-  answer: '📄 Aquí tienes un resumen de tu *consulta*:',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
@@ -635,34 +939,314 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'ecc11cd42f313e00f3579958eb088a20'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7A1006F53B9E01624D',
+    participant: undefined
+  },
+  messageTimestamp: 1738191876,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '6',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '6',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A15507B026C15022CEB',
+    participant: undefined
+  },
+  messageTimestamp: 1738191879,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AAFD7EA387B430F90B0',
+    participant: undefined
+  },
+  messageTimestamp: 1738191887,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ADB530BB28528971109',
+    participant: undefined
+  },
+  messageTimestamp: 1738191890,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_d51e8390-1baa-4649-86d2-0fab98a22a0e',
-  keyword: 'ans_38d44e63-19f3-48e3-a9d8-75e6ba4eead3',
-  answer: '✨ Si necesitas algo más, escribe *menu* para volver al inicio.',
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
-    callback: false
+    callback: true
   },
-  refSerialize: 'be5ba50b418bc24eb79bc8440f96a6be'
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A6EABF2982E4421BF4F',
+    id: '3A878D601956410B3CB3',
     participant: undefined
   },
-  messageTimestamp: 1738190609,
+  messageTimestamp: 1738191896,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '7',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '7',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A458E18DCBD93E7F266',
+    participant: undefined
+  },
+  messageTimestamp: 1738191899,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AF05732499A50B834F4',
+    participant: undefined
+  },
+  messageTimestamp: 1738191908,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A26CC61E5DBACB10686',
+    participant: undefined
+  },
+  messageTimestamp: 1738191912,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AE30857B3A1D117C1A3',
+    participant: undefined
+  },
+  messageTimestamp: 1738191914,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A0DBA8107099FCEE7E7',
+    participant: undefined
+  },
+  messageTimestamp: 1738191916,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A615246DB6493B4DB75',
+    participant: undefined
+  },
+  messageTimestamp: 1738191930,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -677,8 +1261,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
-  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
   answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
     '\n' +
     '1️⃣ *Usuarios*\n' +
@@ -698,16 +1282,474 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A0088E67DAF53B098D8',
+    id: '3A5186229E95FDB08016',
     participant: undefined
   },
-  messageTimestamp: 1738190611,
+  messageTimestamp: 1738191932,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AECF48D896137657925',
+    participant: undefined
+  },
+  messageTimestamp: 1738191937,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7CC89A989F86DB7440',
+    participant: undefined
+  },
+  messageTimestamp: 1738191939,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A8D6894213BA2C75858',
+    participant: undefined
+  },
+  messageTimestamp: 1738191943,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'menu',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f4547ded-b751-4556-9047-30e6b29a4fed',
+  keyword: 'key_042ab024-b26e-42b4-b24e-b1950f5c04a2',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales - Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a55087e989002636fc18d8eac263de05'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AEC39DDA33D0EBFB5FD',
+    participant: undefined
+  },
+  messageTimestamp: 1738191946,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AB10AAAE36870DFBFB6',
+    participant: undefined
+  },
+  messageTimestamp: 1738191947,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_0b29e4c5-b2c3-4998-86b3-b15b90af6608',
+  keyword: 'ans_45c9c4db-27eb-4b32-8ff6-fdfc0e7265d9',
+  answer: '📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ejemplo: Enero, Febrero, etc.)',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '46188e5a6ff425fd2fd0ddcec75d8817'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AB9C8EB17236C0255DE',
+    participant: undefined
+  },
+  messageTimestamp: 1738191950,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'enero',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'enero',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_1cc59aad-7c84-44c7-b154-95a9c7553ccd',
+  keyword: 'ans_0b29e4c5-b2c3-4998-86b3-b15b90af6608',
+  answer: '⏳ ¿Cuántos días te gustaría viajar aproximadamente?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '288ea270a3185910732c7c1fb483db54'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A10D6101B5938C33450',
+    participant: undefined
+  },
+  messageTimestamp: 1738191955,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '15',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '15',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_64467133-0971-4ae1-92e0-0292bb4ff5d8',
+  keyword: 'ans_1cc59aad-7c84-44c7-b154-95a9c7553ccd',
+  answer: '🌍 ¿Cuál es tu destino preferido? ¿Tienes una segunda opción?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '77170b6f27f38547d8187905020178a2'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A9C46776554183D2459',
+    participant: undefined
+  },
+  messageTimestamp: 1738191961,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'corrientes',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'corrientes',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_dc85bec6-6b0d-483b-99ec-3eac447eb916',
+  keyword: 'ans_64467133-0971-4ae1-92e0-0292bb4ff5d8',
+  answer: '📄 Aquí tienes un resumen de tu *consulta*:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '5b87a4dacad19a77a6bbb971ec148e51'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_d41ca19e-a84b-46a0-9d59-c62583d9c138',
+  keyword: 'ans_dc85bec6-6b0d-483b-99ec-3eac447eb916',
+  answer: '✨ Si necesitas algo más, escribe *menu* para volver al inicio.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '2356d47ef53715f6e3a1c0bd629c486a'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A4F946B5DA45DCB9EF3',
+    participant: undefined
+  },
+  messageTimestamp: 1738191968,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7A397214542580F0A2',
+    participant: undefined
+  },
+  messageTimestamp: 1738191970,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A758A50024808763F17',
+    participant: undefined
+  },
+  messageTimestamp: 1738191972,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_842a3fc4-5994-4bbb-8d77-31bf0cd775f6',
+  keyword: 'key_29b20e9e-2e72-44c1-819c-099b6fd1522d',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '1530bad8666646bc911fef2d1fd25e2c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A411E2DBA74EC3C95C2',
+    participant: undefined
+  },
+  messageTimestamp: 1738191974,
   pushName: 'Diego',
   broadcast: false,
   message: Message {

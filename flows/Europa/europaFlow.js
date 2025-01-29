@@ -1,4 +1,4 @@
-const { addKeyword } = require('@bot-whatsapp/bot');
+const { addKeyword , EVENTS } = require('@bot-whatsapp/bot');
 const flowAndalucia = require('./flowAndalucia'); // Flujo para Andalucía, Madrid y Portugal
 const flowItalia = require('./flowItalia'); // Flujo para Italia
 const flowTesoros = require('./flowTesoros');
@@ -8,7 +8,7 @@ const flowInglaterra = require('./flowInglaterra');
 // Objeto global para almacenar datos temporales de contexto
 const tempData = {};
 
-const europaFlow = addKeyword(["europa", "ubm/ola europa"]) // Palabras clave para activar el flujo
+const europaFlow = addKeyword(EVENTS.ACTION) // Palabras clave para activar el flujo
     .addAction(async (ctx, { flowDynamic }) => {
         const userId = ctx.from;
 
