@@ -7,39 +7,8 @@ const MockAdapter = require('@bot-whatsapp/database/mock');
 const { delay } = require('@whiskeysockets/baileys');
 const db = require('./database');
 const path = require('path');
-const fs = require('fs');
 
 
-
-// Configuración de rutas y carpetas
-const express = require('express');
-
-const app = express();
-
-const PORT = 3001; // Cambia el puerto si es necesario
-const archivosPath = path.join(__dirname, 'public', 'archivos');
-app.use('/archivos', express.static(archivosPath));
-
-// Hacer que la carpeta "archivos" sea accesible
-app.get('/download/:file', (req, res) => {
-    const fileName = req.params.file;
-    const filePath = path.join(archivosPath, fileName);
-
-    if (fs.existsSync(filePath)) {
-        res.download(filePath, fileName, (err) => {
-            if (err) {
-                console.error('❌ Error al descargar el archivo:', err.message);
-                res.status(500).send('Error al descargar el archivo');
-            }
-        });
-    } else {
-        res.status(404).send('Archivo no encontrado');
-    }
-});
-
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
-});
 
 
 
