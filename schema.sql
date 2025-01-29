@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nombre TEXT,
     telefono TEXT UNIQUE,
     correo TEXT
+    
 );
 
 -- Crear tabla de interacciones

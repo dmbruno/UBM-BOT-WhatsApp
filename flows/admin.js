@@ -1,10 +1,10 @@
 const { addKeyword } = require('@bot-whatsapp/bot');
 const db = require('../database');
- // Ajusta la ruta si está en una carpeta diferente
-
+const { format } = require('date-fns');
+const { es } = require('date-fns/locale'); // Soporte para idioma español
 
 // Lista de números de administradores
-const adminNumbers = ['5493875051112','5493875396909']; // Reemplaza con tu número
+const adminNumbers = ['5493875051112', '5493875396909']; // Reemplaza con tus números
 
 const flowAdmin = addKeyword(['admin'])
     .addAnswer(
@@ -12,7 +12,7 @@ const flowAdmin = addKeyword(['admin'])
         "1️⃣ *Usuarios*\n" +
         "2️⃣ *Consultas*\n" +
         "3️⃣ *Interacciones*\n\n" +
-        "Escribe el número correspondiente. Y si deseas volver solo escribe *Menu*.",
+        "Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.",
         { capture: true },
         async (ctx, { flowDynamic }) => {
             const userId = ctx.from;
@@ -25,8 +25,6 @@ const flowAdmin = addKeyword(['admin'])
             const input = ctx.body.trim();
             let result;
 
-        
-            
             try {
                 const dbQuery = async (query) => {
                     return new Promise((resolve, reject) => {
@@ -38,8 +36,10 @@ const flowAdmin = addKeyword(['admin'])
                 };
 
                 if (input === '1') {
-                    result = await dbQuery(`SELECT * FROM usuarios;`);
+                    console.log("📋 Consultando todos los usuarios...");
+                    result = await dbQuery(`SELECT id,nombre,telefono,correo FROM usuarios;`);
                 } else if (input === '2') {
+                    console.log("📋 Consultando todas las consultas...");
                     result = await dbQuery(`
                         SELECT 
                             usuarios.nombre AS usuario_nombre,
@@ -58,6 +58,7 @@ const flowAdmin = addKeyword(['admin'])
                             consultas.usuario_id = usuarios.id;
                     `);
                 } else if (input === '3') {
+                    console.log("📋 Consultando todas las interacciones...");
                     result = await dbQuery(`
                         SELECT 
                             usuarios.nombre AS usuario_nombre,
@@ -74,6 +75,25 @@ const flowAdmin = addKeyword(['admin'])
                 } else {
                     return await flowDynamic("⚠️ Respuesta no válida. Escribe 1, 2 o 3.");
                 }
+
+                if (!result || result.length === 0) {
+                    return await flowDynamic("⚠️ No se encontraron resultados para tu consulta.");
+                }
+
+                // Formatear fechas en los resultados
+                result = result.map((row) => {
+                    const formattedRow = { ...row };
+                    Object.keys(row).forEach((key) => {
+                        if (key.includes('fecha') && row[key]) {
+                            formattedRow[key] = `_${format(
+                                new Date(row[key]),
+                                'dd/MM/yyyy',
+                                { locale: es }
+                            )}_`; // Formato amigable para la fecha en cursiva
+                        }
+                    });
+                    return formattedRow;
+                });
 
                 // Formatear el resultado en un mensaje
                 const formattedResult = result

@@ -1,4 +1,4 @@
-const { addKeyword } = require('@bot-whatsapp/bot');
+const { addKeyword , EVENTS} = require('@bot-whatsapp/bot');
 const flowVip = require('./enjoy15/flowVip'); // Flujo para la opción VIP
 const flowPremium = require('./enjoy15/flowPremium'); // Flujo para la opción Premium
 const flowClassic = require('./enjoy15/flowClassic'); // Flujo para la opción Classic
@@ -7,7 +7,7 @@ const flowWeek = require('./enjoy15/flowWeek'); // Flujo para la opción Week
 // Objeto global para almacenar datos temporales de contexto
 const tempData = {};
 
-const flowTus15 = addKeyword(["5"]) // Activa el flujo con la opción 7
+const flowTus15 = addKeyword(EVENTS.ACTION) // Activa el flujo con la opción 7
     .addAction(async (ctx, { flowDynamic }) => {
         const userId = ctx.from;
 

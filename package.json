@@ -17,10 +17,14 @@
         "@bot-whatsapp/provider": "latest",
         "@whiskeysockets/baileys": "6.5.0",
         "axios": "^1.7.5",
+        "date-fns": "^4.1.0",
         "dotenv": "^16.4.5",
+        "exceljs": "^4.4.0",
+        "express": "^4.21.2",
         "mongodb": "^6.9.0",
         "sqlite3": "^5.1.7",
-        "wa-sticker-formatter": "4.4.4"
+        "wa-sticker-formatter": "4.4.4",
+        "xlsx": "^0.18.5"
     },
     "devDependencies": {
         "@types/node": "^22.5.1",
