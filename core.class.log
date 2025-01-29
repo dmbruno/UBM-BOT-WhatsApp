@@ -2,56 +2,127 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A0DFD8E7A05A608FD83',
+    id: '3AF6D61F5A312FB4110E',
     participant: undefined
   },
-  messageTimestamp: 1731333903,
+  messageTimestamp: 1738159126,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'hola',
+    conversation: 'menu',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'hola',
+  body: 'menu',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_3137441e-d4d4-46d3-9b3a-bfe9f1110f15',
-  keyword: 'key_b8e6f540-ab62-4dc8-bd8f-84f0be476dec',
-  answer: '¡Hola! 👋 Soy el 🤖 de *UBM VIAJES Y TURISMO*. En qué podemos ayudarte hoy❓',
+  ref: 'ans_2fcb766e-919d-40b2-88f0-c40a3acf32db',
+  keyword: 'key_76bf09eb-4536-4873-88f3-46c23cabeb2b',
+  answer: '🌍 *Menú Principal* 🌍  \n' +
+    '🤖 *UBM VIAJES Y TURISMO*\n' +
+    '\n' +
+    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
+    '\n' +
+    '1️⃣ *Quiero una cotización*  \n' +
+    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
+    '\n' +
+    '2️⃣ *Consultar la Ubicación*  \n' +
+    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
+    '\n' +
+    '3️⃣ *Novedades*  \n' +
+    '   Entérate de los últimos eventos y noticias 📰✨  \n' +
+    '\n' +
+    '4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n' +
+    '   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n' +
+    '\n' +
+    '5️⃣ *Tus 15 con UBM*  \n' +
+    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
+    '\n' +
+    '6️⃣ *Grupales Europa*  \n' +
+    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
+    '\n' +
+    '7️⃣ *Grupales - Resto del Mundo*  \n' +
+    '   Explora destinos únicos en otras partes del mundo 🌏✨\n' +
+    '\n' +
+    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
-    callback: false
+    callback: true
   },
-  refSerialize: 'f530ce070d10e327b86a01b1c6d66272'
+  refSerialize: '9a677371fc921ee35e0145bb969af436'
 }
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_f1ca61d5-0521-4f55-a7c1-294b5cba2023',
-  keyword: 'ans_3137441e-d4d4-46d3-9b3a-bfe9f1110f15',
-  answer: 'Escribe *Menu* para explorar las opciones disponibles.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AA17B99FDDFC538BEE7',
+    participant: undefined
   },
-  refSerialize: 'cd25cf566f6a7b69e4435c7bc7dc9091'
+  messageTimestamp: 1738159128,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '7',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '7',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ACDA8C20FDC7FD45360',
+    participant: undefined
+  },
+  messageTimestamp: 1738159132,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '4',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '4',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A523AC442E14B6CDF96',
+    participant: undefined
+  },
+  messageTimestamp: 1738159148,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '5493875051112'
 }

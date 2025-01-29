@@ -4,332 +4,81 @@ require("dotenv").config();
 const QRPortalWeb = require('@bot-whatsapp/portal');
 const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
-//const MongoAdapter = require('@bot-whatsapp/database/mongo');
-//MONGO_DB_URI='mongodb+srv://dmbruno61:ZWuWnzVLAO3OS@ubm-bot.o2goq.mongodb.net/ubm_bot_db?retryWrites=true&w=majority&appName=Ubm-Bot'
-//esto de arriba va en el .env en el caso de conectar la base de datos
 const { delay } = require('@whiskeysockets/baileys');
+const db = require('./database');
+
+const userSessions = {};
 
 
 const path = require('path');
 const fs = require('fs');
 
+const flowAdmin = require('./flows/admin');
+const flowInicio = require('./flows/inicio');
+const menuFlow = require('./flows/menu');
+
+const flowUbicacion = require('./flows/ubicacion'); // Ruta relativa correcta
+const flowConsultas = require('./flows/consultas');
+
+const flowNovedades = require('./flows/novedades');
+const flowFormula1 = require('./flows/formula1')
+const flowMundialClubes = require('./flows/mundialClubes')
+
+const flowPeru = require('./flows/flowPeru')
+
+const flowTus15 = require('./flows/flowTus15');
+const flowVip = require('./flows/enjoy15/flowVip');
+const flowPremium = require('./flows/enjoy15/flowPremium');
+const flowClassic = require('./flows/enjoy15/flowClassic');
+const flowWeek = require('./flows/enjoy15/flowWeek');
 
 
-// para leer el archivo menu.txt
-const menuPath = path.join(__dirname, "mensajes", "menu.txt");
-const menu = fs.readFileSync(menuPath, "utf-8");
+const europaFlow = require('./flows/Europa/europaFlow');
+const flowAndalucia = require('./flows/Europa/flowAndalucia');
+const flowItalia = require('./flows/Europa/flowItalia');
+const flowTesoros = require('./flows/Europa/flowTesoros');
+const flowInglaterra = require('./flows/Europa/flowInglaterra');
 
 
-
-
-// Mensaje de Bienvenida
-const flowPrincipal = addKeyword(['hola', 'hello', 'quiero', 'buenas','info', 'buenos dias', 'buenos días'])
-    .addAnswer('¡Hola! 👋 Soy el 🤖 de *UBM VIAJES Y TURISMO*. En qué podemos ayudarte hoy❓')
-    .addAnswer('Escribe *Menu* para explorar las opciones disponibles.');
-
-
-
-
-// Función para leer el archivo agentes.txt
-const agentesPath = path.join(__dirname, "mensajes", "agentes.txt");
-
-
-
-function getAgentesInfo() {
-    return new Promise((resolve, reject) => {
-        fs.readFile(agentesPath, 'utf-8', (err, data) => {
-            if (err) {
-                return reject('Error al leer la información de los agentes.');
-            }
-            resolve(data);
-        });
-    });
-}
-
-
-
-
-// flowUbicacion
-const flowUbicacion = addKeyword(EVENTS.ACTION)
-    .addAction(async (ctx, { flowDynamic }) => {
-        try {
-            // Ruta al archivo ubicacion.txt
-            const ubicacionPath = path.join(__dirname, 'mensajes', 'ubicacion.txt');
-
-            // Leer el contenido del archivo de manera síncrona
-            const ubicacionContent = fs.readFileSync(ubicacionPath, 'utf8');
-
-            // Enviar el contenido como un solo mensaje
-            await flowDynamic(ubicacionContent);
-        } catch (error) {
-            console.error('Error al leer ubicacion.txt:', error);
-            await flowDynamic('Lo siento, hubo un problema para obtener la información de ubicación.');
-        }
-    });
+const restoDelMundoFlow = require('./flows/RestoDelMundo/restoDelMundoFlow');
+const flowMexico = require('./flows/RestoDelMundo/flowMexico');
+const flowUsa = require('./flows/RestoDelMundo/flowUsa');
+const flowAsia = require('./flows/RestoDelMundo/flowAsia');
+const espanaPortugalMarruecos = require('./flows/RestoDelMundo/flowEspanaPortugalMarruecos');
 
 
 
 
-// Objeto para almacenar los datos de los usuarios
-const userSessions = {};
-
-const flowConsultas = addKeyword(EVENTS.ACTION)
-    .addAction(async (ctx) => {
-        const userId = ctx.from;
-        userSessions[userId] = userSessions[userId] || { resumen: '' };
-    })
-    .addAnswer(
-        "👥 ¿Cuántos pasajeros son?\nPor favor, indica el número de adultos y si hay menores con edades (0 a 11 años).",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow); // Retornamos directamente gotoFlow
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].pasajeros = ctx.body;
-                userSessions[userId].resumen += `👥 *Pasajeros:* ${ctx.body}\n`;
-                console.log("Pasajeros capturados:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando pasajeros:", error);
-            }
-        }
-    )
-    // Repite la misma lógica en cada addAnswer del flujo
-    .addAnswer(
-        "📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ej: Enero, Febrero, etc.)",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].mes = ctx.body;
-                userSessions[userId].resumen += `📅 *Mes disponible:* ${ctx.body}\n`;
-                console.log("Mes capturado:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando mes:", error);
-            }
-        }
-    )
-    // Continúa aplicando esta modificación en cada paso del flujo
-    .addAnswer(
-        "⏳ ¿Cuántos días te gustaría viajar aproximadamente?",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].dias = ctx.body;
-                userSessions[userId].resumen += `⏳ *Duración:* ${ctx.body} días\n`;
-                console.log("Días capturados:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando días:", error);
-            }
-        }
-    )
-    .addAnswer(
-        "🏨 ¿Qué tipo de servicio prefieres?\n\n1️⃣ All inclusive\n2️⃣ Solo desayuno\n3️⃣ Ambos combinados",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].servicio = ctx.body;
-
-                let servicioTexto = '';
-                switch (ctx.body.trim()) {
-                    case '1':
-                        servicioTexto = 'All inclusive';
-                        break;
-                    case '2':
-                        servicioTexto = 'Solo desayuno';
-                        break;
-                    case '3':
-                        servicioTexto = 'Ambos combinados';
-                        break;
-                    default:
-                        servicioTexto = ctx.body;
-                }
-
-                userSessions[userId].resumen += `🏨 *Servicio preferido:* ${servicioTexto}\n`;
-                console.log("Servicio capturado:", servicioTexto);
-            } catch (error) {
-                console.error("Error capturando servicio:", error);
-            }
-        }
-    )
-    .addAnswer(
-        "🌍 ¿Cuál es tu destino preferido? ¿Y si tienes una segunda opción?",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].destino = ctx.body;
-                userSessions[userId].resumen += `🌍 *Destino preferido:* ${ctx.body}\n`;
-                console.log("Destino capturado:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando destino:", error);
-            }
-        }
-    )
-    .addAnswer(
-        "🚫 ¿Hay algún lugar que no te gustaría visitar?",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].no_deseado = ctx.body;
-                userSessions[userId].resumen += `🚫 *Lugares no deseados:* ${ctx.body}\n`;
-                console.log("Lugar no deseado capturado:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando lugar no deseado:", error);
-            }
-        }
-    )
-    .addAnswer(
-        "📧 Por último, ¿podrías proporcionarnos tu correo electrónico para ponernos en contacto contigo?",
-        { capture: true },
-        async (ctx, { flowDynamic, gotoFlow }) => {
-            try {
-                const input = ctx.body.trim().toLowerCase();
-
-                if (input === 'menu') {
-                    await flowDynamic("🔄 Has decidido volver al menú principal. Puedes retomar la cotización en cualquier momento.");
-                    delete userSessions[ctx.from];
-                    return gotoFlow(menuFlow);
-                }
-
-                const userId = ctx.from;
-                userSessions[userId].email = ctx.body;
-                userSessions[userId].resumen += `📧 *Correo electrónico:* ${ctx.body}\n`;
-                console.log("Correo electrónico capturado:", ctx.body);
-            } catch (error) {
-                console.error("Error capturando correo electrónico:", error);
-            }
-        }
-    )
-    .addAnswer(
-        "📄 Gracias por toda la información. A continuación, te mostramos un resumen de tu cotización:",
-        { capture: false },
-        async (ctx, { flowDynamic }) => {
-            try {
-                const userId = ctx.from;
-                const resumenCompleto = `*📝 Resumen de cotización:*\n${userSessions[userId].resumen}`;
-                await flowDynamic(resumenCompleto);
-                console.log("Resumen enviado");
-
-                // Limpiar los datos del usuario después de finalizar el flujo
-                delete userSessions[userId];
-            } catch (error) {
-                console.error("Error mostrando resumen:", error);
-            }
-        }
-    )
-    .addAnswer("✨ Nuestros agentes estarán contactándote en breve para finalizar la cotización. ¡Gracias por elegirnos!\n\n🔄 Si deseas volver al menú, por favor escribe *Menu*.");
-
-
-
-
-// Promociones
-const flowPromos = addKeyword(EVENTS.ACTION)
-    .addAnswer("🌍 *Promo Uruguay y Brasil* 🌴", {
-        media: "https://drive.google.com/uc?export=view&id=1jE4k4PYY87PlaUlbZemUJpTbFSFHQ7rQ",
-    })
-    .addAnswer("🌍 *Promo EUROPA* 🌴", {
-        media: "https://drive.google.com/uc?export=view&id=1Lstf5WrFosj_4fGUWwDIa0zhyt6wceAW",
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🌍 *Promo Costa Mujeres* 🌴", {
-        media: "https://drive.google.com/uc?export=view&id=1m7oD6GJXSU8v7qOQyh8NQlKrm2oakiXr",
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🔴 *Importante:* Las promociones pueden cambiar, por lo que te recomendamos siempre verificar los detalles con uno de nuestros agentes para asegurarte de que estén actualizadas. 🛎️", {
-        delay: 500  // 0.5 segundos de retraso
-    })
-    .addAnswer("🔄 Si deseas volver al menú, por favor escribe *Menu*.", {
-        delay: 500  // 0.5 segundos de retraso
-    });
-
-
-// Menú inicial
-const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
-    menu,
-    { capture: true },
-    async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
-        if (!["1", "2", "3", "4", "0"].includes(ctx.body.trim())) {
-            return fallBack(
-                "Respuesta no válida, por favor selecciona una de las opciones."
-            );
-        }
-        switch (ctx.body.trim()) {
-            case "1":
-                return gotoFlow(flowConsultas);
-
-            case "2":
-                try {
-                    const agentesInfo = await getAgentesInfo();
-                    return await flowDynamic(`${agentesInfo}`);
-                } catch (error) {
-                    return await flowDynamic(error);
-                }
-            case "3":
-                return gotoFlow(flowUbicacion);
-            case "4":
-                return gotoFlow(flowPromos);
-            case "0":
-                return await flowDynamic(
-                    "Saliendo... Puedes volver a acceder a este menú escribiendo '*Menu*'"
-                );
-        }
-    }
-);
 
 // Iniciar el bot
 const main = async () => {
     const adapterDB = new MockAdapter();
-    const adapterFlow = createFlow([flowPrincipal, menuFlow, flowPromos, flowConsultas, flowUbicacion]);
+    const adapterFlow = createFlow([
+        flowAdmin,
+        flowInicio,
+        menuFlow,
+        flowConsultas,
+        flowUbicacion,
+        flowNovedades,
+        flowFormula1,
+        flowMundialClubes,
+        flowPeru,
+        flowTus15,
+        flowVip,
+        flowPremium,
+        flowClassic,
+        flowWeek,
+        europaFlow,
+        flowAndalucia,
+        flowItalia,
+        flowTesoros,
+        flowInglaterra,
+        restoDelMundoFlow,
+        flowMexico,
+        flowUsa,
+        flowAsia,
+        espanaPortugalMarruecos
+    ]);
     const adapterProvider = createProvider(BaileysProvider);
 
     createBot({
@@ -338,7 +87,12 @@ const main = async () => {
         database: adapterDB,
     });
 
+    
     QRPortalWeb();
 };
+
+
+
+
 
 main();

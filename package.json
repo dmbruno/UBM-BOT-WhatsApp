@@ -19,6 +19,7 @@
         "axios": "^1.7.5",
         "dotenv": "^16.4.5",
         "mongodb": "^6.9.0",
+        "sqlite3": "^5.1.7",
         "wa-sticker-formatter": "4.4.4"
     },
     "devDependencies": {
