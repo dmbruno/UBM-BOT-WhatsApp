@@ -22,7 +22,7 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
     "   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n\n" +
     "5️⃣ *Tus 15 con UBM*  \n" +
     "   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n\n" +
-    "6️⃣ *Grupales Europa*  \n" +
+    "6️⃣ *Grupales - Europa*  \n" +
     "   Descubre las mejores rutas y experiencias en Europa 🌍✨\n\n" +
     "7️⃣ *Grupales - Resto del Mundo*  \n" +
     "   Explora destinos únicos en otras partes del mundo 🌏✨\n\n" +
