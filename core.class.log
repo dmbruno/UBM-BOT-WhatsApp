@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A4942302A64A20E9EC7',
+    id: '3A2E6DCE08D54E7CC199',
     participant: undefined
   },
-  messageTimestamp: 1738187716,
+  messageTimestamp: 1738190538,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -21,8 +21,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_7569929a-2c6c-465b-b4f2-eef5b99337ee',
-  keyword: 'key_1f223c7b-531a-469b-b282-e4fe0eef8f2e',
+  ref: 'ans_42abeaa4-d624-405c-bd7a-e93ff29ab71d',
+  keyword: 'key_9a15c5b3-2d51-4cb9-affc-0978c5e9704b',
   answer: '__call_action__',
   options: {
     media: null,
@@ -36,16 +36,115 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '6ca109c3ac03e177306c6691f9b8f7de'
+  refSerialize: '62d6b821b7acf8d37598c4709d0b1075'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f7900afc-1cbf-4e82-9fef-68535f008fd5',
+  keyword: 'ans_42abeaa4-d624-405c-bd7a-e93ff29ab71d',
+  answer: '✏️ Escribe tu *nombre completo*:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '73685c4f86c8cc3f4d74ddbb0bd15b1d'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A0D08C5EA4EFFB1F100',
+    id: '3ACF468B1A1235BD2342',
     participant: undefined
   },
-  messageTimestamp: 1738187721,
+  messageTimestamp: 1738190545,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'Diego Bruno',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Diego Bruno',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_b41e9e75-fa85-4b8d-89cb-c8730c08f033',
+  keyword: 'ans_f7900afc-1cbf-4e82-9fef-68535f008fd5',
+  answer: '✉️ Escribe tu *correo electrónico*:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ec1575d6ab2baed091a1046c6e83fd6e'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AB7576D0C3885E65CBD',
+    participant: undefined
+  },
+  messageTimestamp: 1738190551,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'dmbruno61@gmail.com',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'dmbruno61@gmail.com',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A7F8D00BA98CBE279CF',
+    participant: undefined
+  },
+  messageTimestamp: 1738190557,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '5',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '5',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ACA8E2720E150020D79',
+    participant: undefined
+  },
+  messageTimestamp: 1738190561,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -63,144 +162,27 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A7616E3F938D9A0D88F',
+    id: '3A88AA68BB4BA22E3463',
     participant: undefined
   },
-  messageTimestamp: 1738187725,
+  messageTimestamp: 1738190571,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '2 y 2',
+    conversation: 'si',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '2 y 2',
+  body: 'si',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_e8fa4fc8-3ee6-4b32-94f0-5a66ea6bd6d3',
-  keyword: 'ans_d05cdbf6-66d4-4102-9693-8b00cc5dfe2b',
-  answer: '📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ejemplo: Enero, Febrero, etc.)',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '93f94e6310a0fb969ac91b3062117a36'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A64CDCF472ED9384BE2',
-    participant: undefined
-  },
-  messageTimestamp: 1738187727,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'marzo',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'marzo',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_628b362d-0a9d-4628-aa2d-42dcc18abc62',
-  keyword: 'ans_e8fa4fc8-3ee6-4b32-94f0-5a66ea6bd6d3',
-  answer: '⏳ ¿Cuántos días te gustaría viajar aproximadamente?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '4334f44de7bd27271208abe18a8de2ca'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AFBACE5971B7E144533',
-    participant: undefined
-  },
-  messageTimestamp: 1738187730,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '15',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '15',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_d1902549-504c-4732-99ff-35e8a996c7b2',
-  keyword: 'ans_628b362d-0a9d-4628-aa2d-42dcc18abc62',
-  answer: '🌍 ¿Cuál es tu destino preferido? ¿Tienes una segunda opción?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'c6d91c7d93422bfa68c2be2dd419f51b'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AC218A8CDCB0D8D67D9',
-    participant: undefined
-  },
-  messageTimestamp: 1738187733,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'bolivia',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'bolivia',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_cf4e76e7-718d-44b5-82c5-6c4dffa14a1d',
-  keyword: 'ans_d1902549-504c-4732-99ff-35e8a996c7b2',
-  answer: '📄 Aquí tienes un resumen de tu *consulta*:',
+  ref: 'ans_2f7a6c8b-92d4-4123-abc0-100198284b8c',
+  keyword: 'ans_55cd5d66-95ba-415c-89f4-dc5396770c8e',
+  answer: '✨Si necesitas algo más, escribe *menu* para volver al inicio.',
   options: {
     media: null,
     buttons: [],
@@ -213,34 +195,214 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '6a45daf667e55d530082d0207c8e746b'
+  refSerialize: '9d6381dbe4d780335de74adbab112dff'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A78486DDED1BBF81785',
+    participant: undefined
+  },
+  messageTimestamp: 1738190575,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_429101b6-6fff-490e-8ff9-599639cfa016',
-  keyword: 'ans_cf4e76e7-718d-44b5-82c5-6c4dffa14a1d',
-  answer: '✨ Si necesitas algo más, escribe *menu* para volver al inicio.',
+  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
+  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
-    callback: false
+    callback: true
   },
-  refSerialize: '70f9147901caca7bb200acc526a073b4'
+  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A5AF61FE9E50D7258BE',
+    id: '3A8E6FAA1700EC6D1313',
     participant: undefined
   },
-  messageTimestamp: 1738187737,
+  messageTimestamp: 1738190578,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A1C37309C285AD7461C',
+    participant: undefined
+  },
+  messageTimestamp: 1738190581,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
+  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AFF89882D2EB066F99C',
+    participant: undefined
+  },
+  messageTimestamp: 1738190583,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3ADF21EBD5E92BA1FB15',
+    participant: undefined
+  },
+  messageTimestamp: 1738190586,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'admin',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'admin',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
+  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A8C4B7280426EB2CA7F',
+    participant: undefined
+  },
+  messageTimestamp: 1738190588,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '3',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A6803EA431764DA4DCA',
+    participant: undefined
+  },
+  messageTimestamp: 1738190591,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -255,8 +417,8 @@
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_10a84c38-208f-4f43-9a9f-40b484678545',
-  keyword: 'key_452ff768-7c99-49d1-ba83-7318a90261d4',
+  ref: 'ans_14886c40-8e19-43cb-a23e-df5602919ac7',
+  keyword: 'key_16814ef0-281e-4535-b42c-f119b2e8cbbc',
   answer: '🌍 *Menú Principal* 🌍  \n' +
     '🤖 *UBM VIAJES Y TURISMO*\n' +
     '\n' +
@@ -296,16 +458,211 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '2722451349a9ebd7bc5097fda63c81f9'
+  refSerialize: 'e55476454a482fede74b3afb60c9d0e2'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3AC2F0FEA9ACC7A860EB',
+    id: '3A0995AFD53BC8066C19',
     participant: undefined
   },
-  messageTimestamp: 1738187740,
+  messageTimestamp: 1738190593,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '1',
+  from: '5493875051112'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AF760518BFFA11A704A',
+    participant: undefined
+  },
+  messageTimestamp: 1738190596,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '2 y 2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2 y 2',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_475f42dd-d265-4d43-83ab-a63b9379db85',
+  keyword: 'ans_e7f38417-7e37-4e58-ac71-d35d7ba63471',
+  answer: '📅 Perfecto, ¿en qué mes o meses estarías disponible para viajar? (Ejemplo: Enero, Febrero, etc.)',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a252f31ba59867710c491e3cf361a52e'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A73AB08AB201B7F47E3',
+    participant: undefined
+  },
+  messageTimestamp: 1738190600,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'marzo',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'marzo',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4e4e51c9-6051-4dda-aa0e-13d7faadcb5e',
+  keyword: 'ans_475f42dd-d265-4d43-83ab-a63b9379db85',
+  answer: '⏳ ¿Cuántos días te gustaría viajar aproximadamente?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '1544327d181526193099e07f9fd8f3ba'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A4B5A66111EE812870D',
+    participant: undefined
+  },
+  messageTimestamp: 1738190602,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: '15',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '15',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_89e48ece-c089-4b24-ae36-dbe8fc09c0f7',
+  keyword: 'ans_4e4e51c9-6051-4dda-aa0e-13d7faadcb5e',
+  answer: '🌍 ¿Cuál es tu destino preferido? ¿Tienes una segunda opción?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b617d5743b07250affc192c1cca7994a'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3AEA153AEAEACE1B975F',
+    participant: undefined
+  },
+  messageTimestamp: 1738190605,
+  pushName: 'Diego',
+  broadcast: false,
+  message: Message {
+    conversation: 'bolivia',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'bolivia',
+  from: '5493875051112'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_38d44e63-19f3-48e3-a9d8-75e6ba4eead3',
+  keyword: 'ans_89e48ece-c089-4b24-ae36-dbe8fc09c0f7',
+  answer: '📄 Aquí tienes un resumen de tu *consulta*:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ecc11cd42f313e00f3579958eb088a20'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_d51e8390-1baa-4649-86d2-0fab98a22a0e',
+  keyword: 'ans_38d44e63-19f3-48e3-a9d8-75e6ba4eead3',
+  answer: '✨ Si necesitas algo más, escribe *menu* para volver al inicio.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'be5ba50b418bc24eb79bc8440f96a6be'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875051112@s.whatsapp.net',
+    fromMe: false,
+    id: '3A6EABF2982E4421BF4F',
+    participant: undefined
+  },
+  messageTimestamp: 1738190609,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -319,24 +676,48 @@
   body: 'admin',
   from: '5493875051112'
 }
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_83670106-55c4-4f34-8e07-ced3b95dfff7',
+  keyword: 'key_13cecaa8-c5e1-4336-91b2-2dd003d42cfb',
+  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ *Usuarios*\n' +
+    '2️⃣ *Consultas*\n' +
+    '3️⃣ *Interacciones*\n' +
+    '\n' +
+    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '7654838ae1bfa05abeff64e8ca27ff6b'
+}
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A29209765500F7BE1E7',
+    id: '3A0088E67DAF53B098D8',
     participant: undefined
   },
-  messageTimestamp: 1738187743,
+  messageTimestamp: 1738190611,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '3',
+    conversation: '2',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '3',
+  body: '2',
   from: '5493875051112'
 }
