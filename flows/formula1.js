@@ -7,6 +7,15 @@ const flowFormula1 = addKeyword(EVENTS.ACTION)
         media: "https://drive.google.com/uc?export=view&id=1RguBIMnae7cs6EU6d_h1sDZIRH3KJGcg",
     })
     .addAnswer(
+        "📝 *¿Qué incluye este paquete?*\n\n" +
+        "🏨 *3 noches en hotel 3* con desayuno.*\n" +
+        "🚐 *Traslados al hotel y circuito por 3 días.*\n" +
+        "🎫 *Tickets Sector G + Kit F1.*\n" +
+        "🩺 *Asistencia médica Intermac.*\n\n" +
+        "✨ *¡Disfruta de una experiencia única en el Circuito Interlagos de São Paulo!* 🏎️",
+        { delay: 1000 } // Pequeño retraso para mejorar la experiencia del usuario
+    )
+    .addAnswer(
         "🤔 ¿Te gustaría recibir más info? *sí* o *no*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {

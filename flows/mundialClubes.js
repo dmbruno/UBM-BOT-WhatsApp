@@ -7,6 +7,16 @@ const flowMundialClubes = addKeyword(EVENTS.ACTION)
         media: "https://drive.google.com/uc?export=view&id=1LIt0yK4mgX4WJLhNY0vz4JdN7-bYax-F",
     })
     .addAnswer(
+        "📝 *¿Qué incluye este paquete?*\n\n" +
+        "🌙 *9 o 12 noches en Estados Unidos en hotel 3 estrellas.*\n" +
+        "🎫 *Tickets Categoría 3 para 3 partidos de Fase de Grupos siguiendo a Boca o River.*\n" +
+        "📞 *Asistencia al viajero.*\n" +
+        "✨ *Y mucho más...*\n\n" +
+        "💰 *Paquetes desde USD 2.999.*\n" +
+        "⚽ *¡No te pierdas esta oportunidad única para vivir el fútbol internacional!*",
+        { delay: 1000 } // Pequeño retraso para mejorar la experiencia del usuario
+    )
+    .addAnswer(
         "🤔 ¿Te gustaría recibir mas info.? Escribe *sí* o *no*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
