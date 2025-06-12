@@ -6,7 +6,7 @@ const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
     .addAnswer("✈️ *Turquía + Islas del Egeo 🇹🇷*.", {
         media: "https://i.postimg.cc/wMHw2KLk/Turquia-Egeosalida.jpg",
     })
-    .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
+    .addAnswer("✈️ *Turquía + Islas del Egeo 🇹🇷*.", {
         media: "https://i.postimg.cc/tg4ZhBsV/Turquia-Egeo-Incluye.jpg",
     })
     .addAnswer(
