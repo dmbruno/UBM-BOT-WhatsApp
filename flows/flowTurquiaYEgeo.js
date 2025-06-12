@@ -3,7 +3,7 @@ const db = require('../database');
 const { getUserByPhone } = require('../utils/utils');
 
 const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
-    .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
+    .addAnswer("✈️ *Turquía + Islas del Egeo 🇹🇷*.", {
         media: "https://i.postimg.cc/wMHw2KLk/Turquia-Egeosalida.jpg",
     })
     .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
@@ -16,26 +16,26 @@ const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
         "🤔 ¿Te gustaría recibir más info.? Escribe *sí* o *no*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
-            console.log("Inicio del flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
+            
 
             // Verificar si `ctx.from` es válido
             const userId = ctx.from;
             if (!userId) {
-                console.error("Error: No se pudo obtener el ID del usuario.");
+                
                 return await flowDynamic("⚠️ Hubo un problema al procesar tu solicitud. Por favor, inténtalo más tarde.");
             }
 
             // Capturar la entrada del usuario
             const input = ctx.body?.trim().toLowerCase();
             if (!input) {
-                console.log("Entrada no válida o vacía.");
+                
                 return await flowDynamic("⚠️ No detecté tu respuesta. Por favor, escribe *sí* o *no*.");
             }
 
             try {
                 // Obtener usuario de la base de datos
                 const user = await getUserByPhone(userId);
-                console.log("Usuario obtenido:", user);
+                
 
                 if (!user) {
                     console.log("Usuario no encontrado.");
@@ -44,7 +44,7 @@ const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
 
                 // Procesar la respuesta del usuario
                 if (input === "sí" || input === "si") {
-                    console.log("El usuario está interesado en ✈️ *Turquía + Islas del Egeo 🇹🇷*.");
+                    
 
                     // Insertar la interacción en la base de datos
                     await new Promise((resolve, reject) => {
@@ -70,14 +70,14 @@ const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
                         `😊 Si tienes más preguntas, no dudes en escribirnos. ¡Gracias por elegirnos!`
                     );
                 } else if (input === "no") {
-                    console.log("El usuario no está interesado en ✈️ *Turquía + Islas del Egeo 🇹🇷*.");
+                    
                     await flowDynamic("😊 Gracias por tu tiempo. Escribe *menu* para volver al menú principal.");
                 } else {
-                    console.log("Respuesta no válida por parte del usuario.");
+                    
                     await flowDynamic("⚠️ Respuesta no válida. Por favor, escribe *sí* o *no*.");
                 }
             } catch (error) {
-                console.error("Error procesando el flujo ✈️ *Turquía + Islas del Egeo 🇹🇷*:", error.message);
+                
                 await flowDynamic("⚠️ Ocurrió un error al procesar tu respuesta. Por favor, inténtalo nuevamente.");
             }
 
