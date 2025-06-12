@@ -3,17 +3,20 @@ const db = require('../database');
 const { getUserByPhone } = require('../utils/utils');
 
 const flowPeru = addKeyword(EVENTS.ACTION)
-    .addAnswer("✈️ *Salida Grupal a Perú* 🇵🇪", {
-        media: "https://drive.google.com/uc?export=view&id=1htnAaC18otsqAID56nSCSFxSOiCREUwp",
+    .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
+        media: "https://i.postimg.cc/wMHw2KLk/Turquia-Egeosalida.jpg",
     })
-    .addAnswer("✈️ *Salida Grupal a Perú* 🇵🇪", {
-        media: "https://drive.google.com/uc?export=view&id=1VTqWTBaSFgAsyROOwspPvQa_xTpbKq-j",
+    .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
+        media: "https://i.postimg.cc/tg4ZhBsV/Turquia-Egeo-Incluye.jpg",
     })
+    .addAnswer(
+        "🔥 Turquía + Islas del Egeo\n15 días con todo organizado: Estambul, Capadocia, crucero por las islas griegas, y más.\n✈️ Salida desde Argentina con grupo acompañado.\n🌟 ¡Una experiencia única y al mejor precio!\n📲 Pedinos info por aca o en nuestra bio.",
+    )
     .addAnswer(
         "🤔 ¿Te gustaría recibir más info.? Escribe *sí* o *no*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
-            console.log("Inicio del flujo ✈️ *Salida Grupal a Perú* 🇵🇪");
+            console.log("Inicio del flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
 
             // Verificar si `ctx.from` es válido
             const userId = ctx.from;
@@ -41,13 +44,13 @@ const flowPeru = addKeyword(EVENTS.ACTION)
 
                 // Procesar la respuesta del usuario
                 if (input === "sí" || input === "si") {
-                    console.log("El usuario está interesado en ✈️ *Salida Grupal a Perú* 🇵🇪.");
+                    console.log("El usuario está interesado en ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
 
                     // Insertar la interacción en la base de datos
                     await new Promise((resolve, reject) => {
                         db.run(
                             `INSERT INTO interacciones (usuario_id, flujo, respuesta, fecha) VALUES (?, ?, ?, ?)`,
-                            [user.id, 'Grupal-Peru', 'Interesado', new Date().toISOString()],
+                            [user.id, 'Turquia y Egeo', 'Interesado', new Date().toISOString()],
                             (err) => {
                                 if (err) {
                                     console.error("Error al registrar interacción:", err.message);
@@ -62,23 +65,23 @@ const flowPeru = addKeyword(EVENTS.ACTION)
                     // Construir mensaje personalizado
                     const correo = user.correo || "no registrado"; // Si no hay correo, usar "no registrado"
                     await flowDynamic(
-                        `✅ ¡Excelente! Hemos registrado tu interés en ✈️ *Salida Grupal a Perú* 🇵🇪!\n\n` +
+                        `✅ ¡Excelente! Hemos registrado tu interés en ✈️ * Turquía + Islas del Egeo 🇹🇷!.*\n\n` +
                         `📬 Te contactaremos pronto al correo: *${correo}* para enviarte más información.\n\n` +
                         `😊 Si tienes más preguntas, no dudes en escribirnos. ¡Gracias por elegirnos!`
                     );
                 } else if (input === "no") {
-                    console.log("El usuario no está interesado en ✈️ *Salida Grupal a Perú* 🇵🇪.");
+                    console.log("El usuario no está interesado en ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
                     await flowDynamic("😊 Gracias por tu tiempo. Escribe *menu* para volver al menú principal.");
                 } else {
                     console.log("Respuesta no válida por parte del usuario.");
                     await flowDynamic("⚠️ Respuesta no válida. Por favor, escribe *sí* o *no*.");
                 }
             } catch (error) {
-                console.error("Error procesando el flujo ✈️ *Salida Grupal a Perú* 🇵🇪:", error.message);
+                console.error("Error procesando el flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*:", error.message);
                 await flowDynamic("⚠️ Ocurrió un error al procesar tu respuesta. Por favor, inténtalo nuevamente.");
             }
 
-            console.log("Finalizando flujo ✈️ *Salida Grupal a Perú* 🇵🇪.");
+            console.log("Finalizando flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
         }
     );
 

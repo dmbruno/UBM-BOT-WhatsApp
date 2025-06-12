@@ -18,8 +18,8 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
     "   Encuentra la ubicación de nuestra agencia 📍🏢  \n\n" +
     "3️⃣ *Novedades*  \n" +
     "   Entérate de los últimos eventos y noticias 📰✨  \n\n" +
-    "4️⃣ *MACHU PICHU - salida exclusiva UBM desde Salta*  \n" +
-    "   Viaje grupal a Perú con salidas directas desde Salta ✈️🇵🇪\n\n" +
+    "4️⃣ *TURQUIA Y EGEO - salida exclusiva UBM desde Salta*  \n" +
+    "   Viaje grupal a Turquia con salidas directas desde Salta ✈️🇵🇪\n\n" +
     "5️⃣ *Tus 15 con UBM*  \n" +
     "   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n\n" +
     "6️⃣ *Grupales - Europa*  \n" +

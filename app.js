@@ -9,20 +9,22 @@ const db = require('./database');
 const path = require('path');
 
 
-
-
-
-
 // Flujos
 const flowAdmin = require('./flows/admin');
 const flowInicio = require('./flows/inicio');
 const menuFlow = require('./flows/menu');
 const flowUbicacion = require('./flows/ubicacion');
 const flowConsultas = require('./flows/consultas');
+
+//FLUJOS NOVEDADES
 const flowNovedades = require('./flows/novedades');
 const flowFormula1 = require('./flows/formula1');
 const flowMundialClubes = require('./flows/mundialClubes');
+
+//FLUJO PERU EXCLUSIVA
 const flowPeru = require('./flows/flowPeru');
+
+//FLUJO ENJOY 15
 const flowTus15 = require('./flows/flowTus15');
 const flowVip = require('./flows/enjoy15/flowVip');
 const flowPremium = require('./flows/enjoy15/flowPremium');
