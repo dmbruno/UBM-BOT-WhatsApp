@@ -4,7 +4,7 @@ const flowUbicacion = require('./ubicacion'); // Flujo de ubicación
 const flowNovedades = require('./novedades'); // Flujo de novedades
 const flowAdmin = require('./admin'); // Flujo de administrador
 const flowTus15 = require('./flowTus15'); // Flujo para "Tus 15 con UBM"
-const flowPeru = require('./flowPeru'); // Flujo para Machu Picchu
+const flowTurquiaYEgeo = require('./flowTurquiaYEgeo'); // Flujo para Machu Picchu
 const europaFlow = require('./Europa/europaFlow'); // Flujo para "UBM Ola EUROPA"
 const restoMundoFlow = require('./RestoDelMundo/restoDelMundoFlow'); // Flujo para "Grupales - Resto del Mundo"
 
@@ -52,7 +52,7 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
             case "3":
                 return gotoFlow(flowNovedades); // Flujo de novedades
             case "4":
-                return gotoFlow(flowPeru); // Flujo de Machu Picchu
+                return gotoFlow(flowTurquiaYEgeo); // Flujo de Turquia y Egeo
             case "5":
                 return gotoFlow(flowTus15); // Flujo para "Tus 15 con UBM"
             case "6":

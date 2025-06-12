@@ -23,7 +23,7 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas'])
                 await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
             }
         } catch (err) {
-            console.error("Error en el flujo de inicio:", err.message);
+            console.error("Error en el flujo de inicio:", err && err.message ? err.message : err);
             await flowDynamic("⚠️ Hubo un problema procesando tu solicitud. Por favor, inténtalo más tarde.");
         }
     })

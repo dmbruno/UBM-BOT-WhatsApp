@@ -21,8 +21,7 @@ const flowNovedades = require('./flows/novedades');
 const flowFormula1 = require('./flows/formula1');
 const flowMundialClubes = require('./flows/mundialClubes');
 
-//FLUJO PERU EXCLUSIVA
-const flowPeru = require('./flows/flowPeru');
+
 
 //FLUJO ENJOY 15
 const flowTus15 = require('./flows/flowTus15');
@@ -44,6 +43,7 @@ const flowMexico = require('./flows/RestoDelMundo/flowMexico');
 const flowUsa = require('./flows/RestoDelMundo/flowUsa');
 const flowAsia = require('./flows/RestoDelMundo/flowAsia');
 const espanaPortugalMarruecos = require('./flows/RestoDelMundo/flowEspanaPortugalMarruecos');
+const flowTurquiaYEgeo = require('./flows/flowTurquiaYEgeo');
 
 
 
@@ -61,7 +61,7 @@ const main = async () => {
         flowNovedades,
         flowFormula1,
         flowMundialClubes,
-        flowPeru,
+        flowTurquiaYEgeo,
         flowTus15,
         flowVip,
         flowPremium,

@@ -2,7 +2,7 @@ const { addKeyword, EVENTS } = require('@bot-whatsapp/bot');
 const db = require('../database');
 const { getUserByPhone } = require('../utils/utils');
 
-const flowPeru = addKeyword(EVENTS.ACTION)
+const flowTurquiaYEgeo = addKeyword(EVENTS.ACTION)
     .addAnswer("✈️ * Turquía + Islas del Egeo 🇹🇷*.", {
         media: "https://i.postimg.cc/wMHw2KLk/Turquia-Egeosalida.jpg",
     })
@@ -44,7 +44,7 @@ const flowPeru = addKeyword(EVENTS.ACTION)
 
                 // Procesar la respuesta del usuario
                 if (input === "sí" || input === "si") {
-                    console.log("El usuario está interesado en ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
+                    console.log("El usuario está interesado en ✈️ *Turquía + Islas del Egeo 🇹🇷*.");
 
                     // Insertar la interacción en la base de datos
                     await new Promise((resolve, reject) => {
@@ -65,24 +65,24 @@ const flowPeru = addKeyword(EVENTS.ACTION)
                     // Construir mensaje personalizado
                     const correo = user.correo || "no registrado"; // Si no hay correo, usar "no registrado"
                     await flowDynamic(
-                        `✅ ¡Excelente! Hemos registrado tu interés en ✈️ * Turquía + Islas del Egeo 🇹🇷!.*\n\n` +
+                        `✅ ¡Excelente! Hemos registrado tu interés en ✈️ *Turquía + Islas del Egeo 🇹🇷!.*\n\n` +
                         `📬 Te contactaremos pronto al correo: *${correo}* para enviarte más información.\n\n` +
                         `😊 Si tienes más preguntas, no dudes en escribirnos. ¡Gracias por elegirnos!`
                     );
                 } else if (input === "no") {
-                    console.log("El usuario no está interesado en ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
+                    console.log("El usuario no está interesado en ✈️ *Turquía + Islas del Egeo 🇹🇷*.");
                     await flowDynamic("😊 Gracias por tu tiempo. Escribe *menu* para volver al menú principal.");
                 } else {
                     console.log("Respuesta no válida por parte del usuario.");
                     await flowDynamic("⚠️ Respuesta no válida. Por favor, escribe *sí* o *no*.");
                 }
             } catch (error) {
-                console.error("Error procesando el flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*:", error.message);
+                console.error("Error procesando el flujo ✈️ *Turquía + Islas del Egeo 🇹🇷*:", error.message);
                 await flowDynamic("⚠️ Ocurrió un error al procesar tu respuesta. Por favor, inténtalo nuevamente.");
             }
 
-            console.log("Finalizando flujo ✈️ * Turquía + Islas del Egeo 🇹🇷*.");
+            console.log("Finalizando flujo ✈️ *Turquía + Islas del Egeo 🇹🇷*.");
         }
     );
 
-module.exports = flowPeru;
+module.exports = flowTurquiaYEgeo;
