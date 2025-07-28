@@ -2,26 +2,27 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A9B4486A01999D63FEC',
+    id: '3A38BBA7A43BE5F6B808',
     participant: undefined
   },
-  messageTimestamp: 1749746443,
+  messageTimestamp: 1753714676,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'hola',
+    conversation: 'Hola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'hola',
+  verifiedBizName: 'Diego',
+  body: 'Hola',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_8a931836-ec2a-4765-9050-a5c89103d6f5',
-  keyword: 'key_9ee2959a-139f-44ab-8b99-dabf76000d07',
+  ref: 'ans_60159bd8-6ff9-4b37-8c3c-725dd9d6bb94',
+  keyword: 'key_ba978892-faf5-429a-ace6-d1e58582ef4a',
   answer: '__call_action__',
   options: {
     media: null,
@@ -35,266 +36,26 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'ceafcf848f9e35f048454e158c86175b'
+  refSerialize: '0776f5e37c87f6b4721d61bb568dda7b'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3A4D6F1F26702E7E4E14',
+    id: '3A562F500C51417D9E23',
     participant: undefined
   },
-  messageTimestamp: 1749746445,
+  messageTimestamp: 1753714683,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: '4',
+    conversation: '7',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '4',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3AF367EFA9E0DCB749A6',
-    participant: undefined
-  },
-  messageTimestamp: 1749746453,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'si',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'si',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A85F10B32A35ED9C2E1',
-    participant: undefined
-  },
-  messageTimestamp: 1749746462,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'admin',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'admin',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_b5a55df6-dc93-4fa0-9e17-2e673884addf',
-  keyword: 'key_aba4836a-d34d-4b2f-b2fd-b8e368faaddc',
-  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
-    '\n' +
-    '1️⃣ *Usuarios*\n' +
-    '2️⃣ *Consultas*\n' +
-    '3️⃣ *Interacciones*\n' +
-    '\n' +
-    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'e2a5d7db13afc45b0085865039decf7a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A2294AC356A15A87099',
-    participant: undefined
-  },
-  messageTimestamp: 1749746466,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '1',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A776CCAC853100D7E31',
-    participant: undefined
-  },
-  messageTimestamp: 1749746470,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '2',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '2',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A24D05DF2059DB6519E',
-    participant: undefined
-  },
-  messageTimestamp: 1749746475,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'admin',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'admin',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_b5a55df6-dc93-4fa0-9e17-2e673884addf',
-  keyword: 'key_aba4836a-d34d-4b2f-b2fd-b8e368faaddc',
-  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
-    '\n' +
-    '1️⃣ *Usuarios*\n' +
-    '2️⃣ *Consultas*\n' +
-    '3️⃣ *Interacciones*\n' +
-    '\n' +
-    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'e2a5d7db13afc45b0085865039decf7a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A2647D3389A488910CB',
-    participant: undefined
-  },
-  messageTimestamp: 1749746479,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '2',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '2',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A01BE07B440BA705F85',
-    participant: undefined
-  },
-  messageTimestamp: 1749746483,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'admin',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'admin',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_b5a55df6-dc93-4fa0-9e17-2e673884addf',
-  keyword: 'key_aba4836a-d34d-4b2f-b2fd-b8e368faaddc',
-  answer: '🔑 *Modo Administrador Activado*. Escribe el tipo de información que deseas consultar:\n' +
-    '\n' +
-    '1️⃣ *Usuarios*\n' +
-    '2️⃣ *Consultas*\n' +
-    '3️⃣ *Interacciones*\n' +
-    '\n' +
-    'Escribe el número correspondiente. Y si deseas volver solo escribe *menu*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'e2a5d7db13afc45b0085865039decf7a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3A89BCE872F58DF88871',
-    participant: undefined
-  },
-  messageTimestamp: 1749746485,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '3',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '3',
+  body: '7',
   from: '5493875051112'
 }

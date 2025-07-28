@@ -80,7 +80,12 @@ const main = async () => {
         espanaPortugalMarruecos
     ]);
 
-    const adapterProvider = createProvider(BaileysProvider);
+    const adapterProvider = createProvider(BaileysProvider, {
+        // Opciones adicionales para Baileys
+        browser: ['Bot', 'Chrome', '1.0.0'],
+        syncFullHistory: false,
+        markOnlineOnConnect: false
+    });
 
     createBot({
         flow: adapterFlow,
