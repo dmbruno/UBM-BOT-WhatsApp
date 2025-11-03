@@ -1,29 +1,39 @@
 const { addKeyword , EVENTS } = require('@bot-whatsapp/bot');
-const flowAndalucia = require('./flowAndalucia'); // Flujo para Andalucía, Madrid y Portugal
-const flowItalia = require('./flowItalia'); // Flujo para Italia
-const flowTesoros = require('./flowTesoros');
-const flowInglaterra = require('./flowInglaterra');
+// Flujos anteriores (comentados - no se usan actualmente)
+// const flowAndalucia = require('./flowAndalucia'); // Flujo para Andalucía, Madrid y Portugal
+// const flowItalia = require('./flowItalia'); // Flujo para Italia
+// const flowTesoros = require('./flowTesoros');
+// const flowInglaterra = require('./flowInglaterra');
 
+// Nuevos flujos actualizados 2026
+const flowAventuraIberica = require('./flowAventuraIberica');
+const flowCoreaJapon = require('./flowCoreaJapon');
+const flowDescubreItalia = require('./flowDescubreItalia');
+const flowTurquiaDubai = require('./flowTurquiaDubai');
 
 // Objeto global para almacenar datos temporales de contexto
 const tempData = {};
 
-const europaFlow = addKeyword(EVENTS.ACTION) // Palabras clave para activar el flujo
+const europaFlow = addKeyword(EVENTS.ACTION)
     .addAction(async (ctx, { flowDynamic }) => {
         const userId = ctx.from;
 
         // Establecer el contexto del flujo para el usuario
         tempData[userId] = tempData[userId] || {};
-        tempData[userId].context = 'europaFlow'; // Asignar el contexto
+        tempData[userId].context = 'europaFlow';
         console.log(`🔍 [europaFlow] Contexto asignado al usuario: ${userId}`);
     })
     .addAnswer(
         "🌍 *Salidas Grupales - Europa* 🌟\n\n" +
-        "¡Descubrí los destinos más fascinantes de Europa con nuestras opciones exclusivas! Elegí la opción que más te interese:\n\n" +
-        "1️⃣ *Andalucía/Madrid y Portugal* 🇪🇸🇵🇹\n" +
-        "2️⃣ *Italia: Roma y Maravillas del Sur* 🇮🇹\n" +
-        "3️⃣ *Tesoros del Adriático: Italia y Croacia* 🇮🇹🇭🇷\n" +
-        "4️⃣ *Inglaterra/Escocia e Irlanda* 🇬🇧🇮🇪\n\n" +
+        "¡Descubrí los destinos más fascinantes con nuestras opciones exclusivas! Elegí la opción que más te interese:\n\n" +
+        "1️⃣ *Aventura Ibérica* 🇪🇸🇵🇹\n" +
+        "   Madrid, Andalucía, Portugal y muchos más...\n\n" +
+        "2️⃣ *Corea y Japón* 🇰🇷🇯🇵\n" +
+        "   Seúl, Tokio, Kioto y muchos más...\n\n" +
+        "3️⃣ *Descubre Italia* 🇮🇹\n" +
+        "   Milán, Venecia, Roma y muchos más...\n\n" +
+        "4️⃣ *Turquía y Dubái* 🇹🇷🇦🇪\n" +
+        "   Estambul, Capadocia, Dubái y muchos más...\n\n" +
         "✍️ *Escribe el número de la opción que te interesa* para recibir más información.",
         { capture: true },
         async (ctx, { gotoFlow, flowDynamic }) => {
@@ -37,7 +47,7 @@ const europaFlow = addKeyword(EVENTS.ACTION) // Palabras clave para activar el f
                 );
             }
 
-            const input = ctx.body.trim(); // Capturar entrada del usuario
+            const input = ctx.body.trim();
             console.log(`🔍 [europaFlow] Entrada del usuario: ${input}`);
 
             // Validar si la entrada es una opción válida
@@ -50,20 +60,20 @@ const europaFlow = addKeyword(EVENTS.ACTION) // Palabras clave para activar el f
             // Responder según la opción seleccionada
             switch (input) {
                 case "1":
-                    console.log("➡️ [europaFlow] Usuario eligió Andalucía/Madrid y Portugal.");
-                    return  gotoFlow(flowAndalucia);
+                    console.log("➡️ [europaFlow] Usuario eligió Aventura Ibérica.");
+                    return  gotoFlow(flowAventuraIberica);
 
                 case "2":
-                     console.log("➡️ [europaFlow] Usuario eligió Italia: Roma y Maravillas del Sur.");
-                     return gotoFlow(flowItalia);
+                     console.log("➡️ [europaFlow] Usuario eligió Corea y Japón.");
+                     return gotoFlow(flowCoreaJapon);
 
                 case "3":
-                     console.log("➡️ [europaFlow] Usuario eligió Tesoros del Adriático.");
-                     return gotoFlow(flowTesoros);
+                     console.log("➡️ [europaFlow] Usuario eligió Descubre Italia.");
+                     return gotoFlow(flowDescubreItalia);
 
                  case "4":
-                     console.log("➡️ [europaFlow] Usuario eligió Inglaterra/Escocia e Irlanda.");
-                     return gotoFlow(flowInglaterra);
+                     console.log("➡️ [europaFlow] Usuario eligió Turquía y Dubái.");
+                     return gotoFlow(flowTurquiaDubai);
             }
         }
     )
@@ -72,7 +82,7 @@ const europaFlow = addKeyword(EVENTS.ACTION) // Palabras clave para activar el f
         { capture: false },
         async (ctx) => {
             const userId = ctx.from;
-            delete tempData[userId]; // Limpiar contexto al finalizar el flujo
+            delete tempData[userId];
             console.log(`🧹 [europaFlow] Contexto limpiado para el usuario: ${userId}`);
         }
     );

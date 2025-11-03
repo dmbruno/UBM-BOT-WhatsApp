@@ -36,6 +36,10 @@ const flowAndalucia = require('./flows/Europa/flowAndalucia');
 const flowItalia = require('./flows/Europa/flowItalia');
 const flowTesoros = require('./flows/Europa/flowTesoros');
 const flowInglaterra = require('./flows/Europa/flowInglaterra');
+const flowAventuraIberica = require('./flows/Europa/flowAventuraIberica');
+const flowCoreaJapon = require('./flows/Europa/flowCoreaJapon');
+const flowDescubreItalia = require('./flows/Europa/flowDescubreItalia');
+const flowTurquiaDubai = require('./flows/Europa/flowTurquiaDubai');
 
 // Flujos Resto del Mundo
 const restoDelMundoFlow = require('./flows/RestoDelMundo/restoDelMundoFlow');
@@ -73,6 +77,10 @@ const main = async () => {
         flowItalia,
         flowTesoros,
         flowInglaterra,
+        flowAventuraIberica,
+        flowCoreaJapon,
+        flowDescubreItalia,
+        flowTurquiaDubai,
         restoDelMundoFlow,
         flowMexico,
         flowUsa,
