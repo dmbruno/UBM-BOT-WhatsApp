@@ -12,7 +12,7 @@ const flowTurquiaDubai = addKeyword(EVENTS.ACTION)
         "📍 *Recorrido:*\n" +
         "Estambul - Ankara - Capadocia - Pamukkale - Éfeso - Ízmir/Kusadasi - Pérgamo - Troya - Canakkale - Bursa - Estambul - Dubái\n\n" +
         "✨ *Incluye:*\n" +
-        "✈️ Aéreos + alojamiento con desayuno + traslados\n" +
+        "✈️ Aéreos + alojamiento con Desayuno + traslados\n" +
         "🏙️ Visitas según itinerario con guía de habla hispana\n" +
         "🧳 Incluye equipaje 23kg\n" +
         "🩺 Asistencia al viajero infinit\n" +
