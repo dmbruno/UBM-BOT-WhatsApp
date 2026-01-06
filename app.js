@@ -7,6 +7,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock');
 const { delay } = require('@whiskeysockets/baileys');
 const db = require('./database');
 const path = require('path');
+const qrcode = require('qrcode-terminal');
 
 
 // Flujos
@@ -93,6 +94,24 @@ const main = async () => {
         browser: ['Bot', 'Chrome', '1.0.0'],
         syncFullHistory: false,
         markOnlineOnConnect: false
+    });
+
+    // Escuchar el evento de actualización de conexión para mostrar el QR
+    adapterProvider.on('connection.update', (update) => {
+        const { connection, qr } = update;
+        
+        if (qr) {
+            console.log('📱 Escanea este código QR con WhatsApp:');
+            qrcode.generate(qr, { small: true });
+        }
+        
+        if (connection === 'open') {
+            console.log('✅ Conexión establecida con WhatsApp');
+        }
+        
+        if (connection === 'close') {
+            console.log('❌ Conexión cerrada');
+        }
     });
 
     createBot({
