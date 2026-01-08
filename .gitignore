@@ -1,3 +1,21 @@
-node_modules
+# Archivos de sesión de Baileys
+bot_sessions/
+*.data.json
+creds.json
 
+# Base de datos local
+*.db
+*.sqlite
 
+# Archivos de ambiente
+.env
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+.DS_Store

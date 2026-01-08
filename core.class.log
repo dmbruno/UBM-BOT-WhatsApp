@@ -2,26 +2,26 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '3B7AEAC21A4CFBFDA862',
+    id: '2A61E53F841DD653C284',
     participant: undefined
   },
-  messageTimestamp: 1762196033,
+  messageTimestamp: 1767881836,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
-    conversation: 'hola',
+    conversation: 'Hola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'hola',
+  body: 'Hola',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_9a978ccc-926b-409a-b084-6cb65333271d',
-  keyword: 'key_9dc78113-cc1d-476f-a32d-8f03eb35b788',
+  ref: 'ans_08507e23-dc80-478b-9838-198879383312',
+  keyword: 'key_67095d43-438c-4604-95e3-da22a6c46e6f',
   answer: '__call_action__',
   options: {
     media: null,
@@ -35,425 +35,53 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'c32aec9f33e509202b01f39c93f566be'
+  refSerialize: '70bbe6df99e51492948ad4784babbeef'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
+    remoteJid: '42997018267799@lid',
     fromMe: false,
-    id: '3BD3B3C26B4BBD5DF5A6',
+    id: 'AC8DD9B85C8F4DD4E3D69353737852FA',
     participant: undefined
   },
-  messageTimestamp: 1762196035,
-  pushName: 'Diego',
+  messageTimestamp: 1767881934,
+  pushName: 'Eugenia Orlovas UBM',
   broadcast: false,
   message: Message {
-    conversation: '4',
+    conversation: 'Hola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: '4',
-  from: '5493875051112'
+  body: 'Hola',
+  from: '42997018267799@lid'
 }
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B928ED7DA1A078FEA46',
-    participant: undefined
+[ERROR ID (5bcee9c9-f4c0-4dff-bf80-c53e2193b68f)]:  Error: Timed Out
+    at /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/generics.js:137:32 {
+  data: {
+    stack: 'Error\n' +
+      '    at promiseTimeout (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/generics.js:132:19)\n' +
+      '    at waitForMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:114:53)\n' +
+      '    at query (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:136:22)\n' +
+      '    at getUSyncDevices (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:166:30)\n' +
+      '    at /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:357:53\n' +
+      '    at Object.transaction (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/auth-utils.js:136:32)\n' +
+      '    at relayMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:279:30)\n' +
+      '    at Object.sendMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:652:23)\n' +
+      '    at async CoreClass.sendProviderAndSave (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@bot-whatsapp/bot/lib/bundle.bot.cjs:1561:21)\n' +
+      '    at async /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@bot-whatsapp/bot/lib/bundle.bot.cjs:1371:21'
   },
-  messageTimestamp: 1762196043,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '1',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3BB6F29BE7187CD10A32',
-    participant: undefined
-  },
-  messageTimestamp: 1762196056,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'si',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'si',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B9439515A28FCABA02E',
-    participant: undefined
-  },
-  messageTimestamp: 1762196060,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_a409c180-e834-4b60-a059-fd25f207ffad',
-  keyword: 'key_775e19e2-37ff-4fe4-98dc-772afc4296d8',
-  answer: '🌍 *Menú Principal* 🌍  \n' +
-    '🤖 *UBM VIAJES Y TURISMO*\n' +
-    '\n' +
-    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
-    '\n' +
-    '2️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
-    '\n' +
-    '3️⃣ *Tus 15 con UBM*  \n' +
-    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
-    '\n' +
-    '4️⃣ *Grupales - Europa*  \n' +
-    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
-    '\n' +
-    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '159527ffb6cd5af7241aa8bc0cbd224a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3BA5FF76A15413B4E87E',
-    participant: undefined
-  },
-  messageTimestamp: 1762196062,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '4',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B475EC6FC6363CBA248',
-    participant: undefined
-  },
-  messageTimestamp: 1762196064,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '2',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '2',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B4DAB1C0382351CC17B',
-    participant: undefined
-  },
-  messageTimestamp: 1762196081,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'si',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'si',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B37BFBDCA1EF76F8597',
-    participant: undefined
-  },
-  messageTimestamp: 1762196084,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_a409c180-e834-4b60-a059-fd25f207ffad',
-  keyword: 'key_775e19e2-37ff-4fe4-98dc-772afc4296d8',
-  answer: '🌍 *Menú Principal* 🌍  \n' +
-    '🤖 *UBM VIAJES Y TURISMO*\n' +
-    '\n' +
-    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
-    '\n' +
-    '2️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
-    '\n' +
-    '3️⃣ *Tus 15 con UBM*  \n' +
-    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
-    '\n' +
-    '4️⃣ *Grupales - Europa*  \n' +
-    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
-    '\n' +
-    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '159527ffb6cd5af7241aa8bc0cbd224a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3BECD641DE3F6F651C12',
-    participant: undefined
-  },
-  messageTimestamp: 1762196085,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '4',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B195D808877E9187E64',
-    participant: undefined
-  },
-  messageTimestamp: 1762196088,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '3',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '3',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B1C624C37AA8810DE14',
-    participant: undefined
-  },
-  messageTimestamp: 1762196101,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'si',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'si',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B76A438D6B907D6C258',
-    participant: undefined
-  },
-  messageTimestamp: 1762196104,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'menu',
-  from: '5493875051112'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_a409c180-e834-4b60-a059-fd25f207ffad',
-  keyword: 'key_775e19e2-37ff-4fe4-98dc-772afc4296d8',
-  answer: '🌍 *Menú Principal* 🌍  \n' +
-    '🤖 *UBM VIAJES Y TURISMO*\n' +
-    '\n' +
-    'En qué podemos ayudarte hoy❓ Elige una de las siguientes opciones:\n' +
-    '\n' +
-    '1️⃣ *Quiero una cotización*  \n' +
-    '   Descubre los mejores destinos para tus próximas vacaciones 🌴✈️  \n' +
-    '\n' +
-    '2️⃣ *Consultar la Ubicación*  \n' +
-    '   Encuentra la ubicación de nuestra agencia 📍🏢  \n' +
-    '\n' +
-    '3️⃣ *Tus 15 con UBM*  \n' +
-    '   Celebra tus 15 años con un viaje inolvidable 💃🌎  \n' +
-    '\n' +
-    '4️⃣ *Grupales - Europa*  \n' +
-    '   Descubre las mejores rutas y experiencias en Europa 🌍✨\n' +
-    '\n' +
-    '✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '159527ffb6cd5af7241aa8bc0cbd224a'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3BE8BEA0DF48C812B673',
-    participant: undefined
-  },
-  messageTimestamp: 1762196106,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '4',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3BA0A489FB694D51025E',
-    participant: undefined
-  },
-  messageTimestamp: 1762196109,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: '4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: '4',
-  from: '5493875051112'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5493875051112@s.whatsapp.net',
-    fromMe: false,
-    id: '3B8BE1ABCC544DFC2E0C',
-    participant: undefined
-  },
-  messageTimestamp: 1762196118,
-  pushName: 'Diego',
-  broadcast: false,
-  message: Message {
-    conversation: 'si',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'si',
-  from: '5493875051112'
+  isBoom: true,
+  isServer: false,
+  output: {
+    statusCode: 408,
+    payload: {
+      statusCode: 408,
+      error: 'Request Time-out',
+      message: 'Timed Out'
+    },
+    headers: {}
+  }
 }
