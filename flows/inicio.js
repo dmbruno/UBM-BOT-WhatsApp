@@ -17,7 +17,7 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                 console.log('🔍 [flowInicio] Usuario:', userId);
                 
                 if (!userId) {
-                    console.error('❌ [flowInicio] userId indefinido');
+                    console.error('❌ [flowInicio] userId indefinido0');
                     return;
                 }
                 
