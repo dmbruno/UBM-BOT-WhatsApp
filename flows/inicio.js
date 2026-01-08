@@ -50,25 +50,32 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
         "✏️ Escribe tu *nombre completo*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
-            const nombre = ctx.body?.trim();
-            const rawUserId = ctx.from;
-            const userId = rawUserId.split('@')[0]; // Normalizar
+            try {
+                const nombre = ctx.body?.trim();
+                const rawUserId = ctx.from;
+                const userId = rawUserId.split('@')[0]; // Normalizar
 
-            console.log('📝 [flowInicio] Capturando nombre...');
-            console.log('📝 [flowInicio] Usuario ID:', userId);
-            console.log('📝 [flowInicio] Nombre recibido:', nombre);
+                console.log('📝 [flowInicio] Capturando nombre...');
+                console.log('📝 [flowInicio] Usuario ID:', userId);
+                console.log('📝 [flowInicio] Nombre recibido:', nombre);
 
-            if (!nombre || nombre.length < 2) {
-                console.log('⚠️ [flowInicio] Nombre inválido');
-                await flowDynamic("⚠️ Por favor, ingresa un nombre válido.");
-                return;
+                if (!nombre || nombre.length < 2) {
+                    console.log('⚠️ [flowInicio] Nombre inválido');
+                    await flowDynamic("⚠️ Por favor, ingresa un nombre válido.");
+                    return;
+                }
+
+                tempData[userId] = tempData[userId] || {};
+                tempData[userId].nombre = nombre;
+                console.log('✅ [flowInicio] Nombre guardado en tempData:', tempData[userId]);
+
+                await flowDynamic(`Perfecto *${nombre}*! 🚀 Para finalizar el *registro*.`);
+            } catch (err) {
+                console.error("❌ [flowInicio] Error capturando nombre:", err);
+                if (err && err.stack) {
+                    console.error("❌ [flowInicio] Stack trace:", err.stack);
+                }
             }
-
-            tempData[userId] = tempData[userId] || {};
-            tempData[userId].nombre = nombre;
-            console.log('✅ [flowInicio] Nombre guardado en tempData:', tempData[userId]);
-
-            await flowDynamic(`Perfecto *${nombre}*! 🚀 Para finalizar el *registro*.`);
         }
     )
     .addAnswer(
@@ -114,7 +121,9 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                 return gotoFlow(menuFlow);
             } catch (err) {
                 console.error("❌ [flowInicio] Error guardando usuario:", err);
-                console.error("❌ [flowInicio] Stack trace:", err.stack);
+                if (err && err.stack) {
+                    console.error("❌ [flowInicio] Stack trace:", err.stack);
+                }
                 await flowDynamic("⚠️ Hubo un problema al guardar tus datos. Por favor, inténtalo más tarde.");
             }
         }
