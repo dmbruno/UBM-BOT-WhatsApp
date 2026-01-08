@@ -1,128 +1,112 @@
-const { createBot, createProvider, createFlow } = require('@bot-whatsapp/bot');
-require("dotenv").config();
+// ==========================================
+// UBM VIAJES BOT - BAILEYS 7.X MODULAR
+// ==========================================
+// Arquitectura modular para fácil mantenimiento
+// Cada flujo está en su propio archivo
 
-const QRPortalWeb = require('@bot-whatsapp/portal');
-const BaileysProvider = require('@bot-whatsapp/provider/baileys');
-const MockAdapter = require('@bot-whatsapp/database/mock');
-const db = require('./database');
-const qrcode = require('qrcode-terminal');
+import makeWASocket, { 
+    DisconnectReason, 
+    useMultiFileAuthState,
+    Browsers
+} from '@whiskeysockets/baileys';
+import { Boom } from '@hapi/boom';
+import pino from 'pino';
+import qrcode from 'qrcode-terminal';
+import { handleMessage } from './handlers/messageHandler.js';
 
-// Flujos
-const flowTest = require('./flows/test');
-const flowAdmin = require('./flows/admin');
-const flowInicio = require('./flows/inicio');
-const flowRegistro = require('./flows/registro');
-const menuFlow = require('./flows/menu');
-const flowUbicacion = require('./flows/ubicacion');
-const flowConsultas = require('./flows/consultas');
+// ==========================================
+// CONFIGURACIÓN
+// ==========================================
+const AUTH_PATH = './bot_sessions';
+const logger = pino({ level: 'silent' });
 
-// FLUJOS NOVEDADES
-const flowNovedades = require('./flows/novedades');
-const flowFormula1 = require('./flows/formula1');
-const flowMundialClubes = require('./flows/mundialClubes');
+// Estado global de conversaciones
+export const conversationState = {};
 
-// FLUJO ENJOY 15
-const flowTus15 = require('./flows/flowTus15');
-const flowVip = require('./flows/enjoy15/flowVip');
-const flowPremium = require('./flows/enjoy15/flowPremium');
-const flowClassic = require('./flows/enjoy15/flowClassic');
-const flowWeek = require('./flows/enjoy15/flowWeek');
+// ==========================================
+// FUNCIÓN PRINCIPAL DE CONEXIÓN
+// ==========================================
+async function connectToWhatsApp() {
+    const { state, saveCreds } = await useMultiFileAuthState(AUTH_PATH);
 
-// Flujos Europa
-const europaFlow = require('./flows/Europa/europaFlow');
-const flowAndalucia = require('./flows/Europa/flowAndalucia');
-const flowItalia = require('./flows/Europa/flowItalia');
-const flowTesoros = require('./flows/Europa/flowTesoros');
-const flowInglaterra = require('./flows/Europa/flowInglaterra');
-const flowAventuraIberica = require('./flows/Europa/flowAventuraIberica');
-const flowCoreaJapon = require('./flows/Europa/flowCoreaJapon');
-const flowDescubreItalia = require('./flows/Europa/flowDescubreItalia');
-const flowTurquiaDubai = require('./flows/Europa/flowTurquiaDubai');
-
-// Flujos Resto del Mundo
-const restoDelMundoFlow = require('./flows/RestoDelMundo/restoDelMundoFlow');
-const flowMexico = require('./flows/RestoDelMundo/flowMexico');
-const flowUsa = require('./flows/RestoDelMundo/flowUsa');
-const flowAsia = require('./flows/RestoDelMundo/flowAsia');
-const espanaPortugalMarruecos = require('./flows/RestoDelMundo/flowEspanaPortugalMarruecos');
-const flowTurquiaYEgeo = require('./flows/flowTurquiaYEgeo');
-
-// Inicialización del bot
-const main = async () => {
-    const adapterDB = new MockAdapter();
-    const adapterFlow = createFlow([
-        flowTest,
-        flowAdmin,
-        flowInicio,
-        flowRegistro,
-        menuFlow,
-        flowConsultas,
-        flowUbicacion,
-        flowNovedades,
-        flowFormula1,
-        flowMundialClubes,
-        flowTurquiaYEgeo,
-        flowTus15,
-        flowVip,
-        flowPremium,
-        flowClassic,
-        flowWeek,
-        europaFlow,
-        flowAndalucia,
-        flowItalia,
-        flowTesoros,
-        flowInglaterra,
-        flowAventuraIberica,
-        flowCoreaJapon,
-        flowDescubreItalia,
-        flowTurquiaDubai,
-        restoDelMundoFlow,
-        flowMexico,
-        flowUsa,
-        flowAsia,
-        espanaPortugalMarruecos
-    ]);
-
-    const adapterProvider = createProvider(BaileysProvider, {
-        browser: ['Bot', 'Chrome', '1.0.0'],
-        syncFullHistory: false,
-        markOnlineOnConnect: false
+    const sock = makeWASocket({
+        auth: state,
+        printQRInTerminal: false,
+        logger,
+        browser: Browsers.ubuntu('Chrome'),
+        generateHighQualityLinkPreview: true
     });
 
-    // Escuchar el evento de actualización de conexión para mostrar el QR
-    adapterProvider.on('connection.update', (update) => {
-        const { connection, qr } = update;
-        
+    // ==========================================
+    // EVENT: Actualización de conexión
+    // ==========================================
+    sock.ev.on('connection.update', async (update) => {
+        const { connection, lastDisconnect, qr } = update;
+
         if (qr) {
-            console.log('📱 Escanea este código QR con WhatsApp:');
+            console.log('\n📱 ===== ESCANEA ESTE QR CON WHATSAPP =====\n');
             qrcode.generate(qr, { small: true });
+            console.log('\n==========================================\n');
         }
-        
-        if (connection === 'open') {
-            console.log('✅ Conexión establecida con WhatsApp');
-        }
-        
+
         if (connection === 'close') {
-            console.log('❌ Conexión cerrada');
+            const shouldReconnect = (lastDisconnect?.error instanceof Boom)
+                ? lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut
+                : true;
+
+            console.log('❌ Conexión cerrada. Reconectando:', shouldReconnect);
+
+            if (shouldReconnect) {
+                connectToWhatsApp();
+            }
+        } else if (connection === 'open') {
+            console.log('✅ BOT CONECTADO CON BAILEYS 7.X - ARQUITECTURA MODULAR');
+            console.log('🌍 UBM Viajes - Sistema activo');
+            console.log('📱 Soporte completo para LIDs y PNs');
+            console.log('📁 Estructura modular para fácil mantenimiento');
+            console.log('👂 Escuchando mensajes...\n');
         }
     });
 
-    createBot({
-        flow: adapterFlow,
-        provider: adapterProvider,
-        database: adapterDB,
+    // Guardar credenciales cuando cambien
+    sock.ev.on('creds.update', saveCreds);
+
+    // ==========================================
+    // EVENT: Nuevos mapeos LID <-> PN
+    // ==========================================
+    sock.ev.on('lid-mapping.update', (mapping) => {
+        console.log('🔄 Nuevo mapeo LID detectado:', mapping);
     });
 
-    QRPortalWeb();
-};
+    // ==========================================
+    // EVENT: Mensajes entrantes
+    // ==========================================
+    sock.ev.on('messages.upsert', async ({ messages, type }) => {
+        if (type !== 'notify') return;
 
-// ⚠️ HANDLERS GLOBALES DE ERRORES ⚠️
-process.on('unhandledRejection', (reason, promise) => {
+        for (const message of messages) {
+            // Ignorar mensajes propios y de grupos
+            if (message.key.fromMe || message.key.remoteJid.endsWith('@g.us')) continue;
+
+            // Delegar al handler de mensajes
+            await handleMessage(sock, message, conversationState);
+        }
+    });
+
+    return sock;
+}
+
+// ==========================================
+// INICIAR BOT
+// ==========================================
+console.log('🚀 Iniciando UBM Viajes Bot con Baileys 7.x (Arquitectura Modular)...\n');
+connectToWhatsApp();
+
+// Manejar errores globales
+process.on('unhandledRejection', (reason) => {
     console.error('[ERROR] Unhandled Rejection:', reason);
 });
 
 process.on('uncaughtException', (error) => {
     console.error('[ERROR] Uncaught Exception:', error);
 });
-
-main();

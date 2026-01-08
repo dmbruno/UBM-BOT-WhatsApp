@@ -1,23 +1,27 @@
 {
     "name": "base-bailey-memory",
     "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
+    "type": "module",
+    "description": "Bot WhatsApp UBM Viajes con Baileys 7.x + ESM",
+    "main": "app-baileys-pure.js",
     "scripts": {
         "pre-copy": "cd .. && npm run  copy.lib base-baileys-memory",
-        "start": "node app.js"
+        "start": "node app.js",
+        "old": "node app.js"
     },
     "keywords": [],
     "dependencies": {
         "@bot-whatsapp/bot": "^0.1.38",
         "@bot-whatsapp/cli": "latest",
-        "@bot-whatsapp/database": "latest",
+        "@bot-whatsapp/database": "^0.1.38",
         "@bot-whatsapp/portal": "latest",
-        "@bot-whatsapp/provider": "latest",
-        "@whiskeysockets/baileys": "^6.6.0",
+        "@bot-whatsapp/provider": "^0.1.38",
+        "@hapi/boom": "^10.0.1",
+        "@whiskeysockets/baileys": "^7.0.0-rc.9",
         "date-fns": "^4.1.0",
         "dotenv": "^16.4.7",
         "express": "^4.21.2",
+        "pino": "^10.1.0",
         "qrcode-terminal": "^0.12.0",
         "sqlite3": "^5.1.7",
         "wa-sticker-formatter": "^4.4.4",

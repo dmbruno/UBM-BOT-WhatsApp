@@ -1,9 +1,13 @@
-const sqlite3 = require('sqlite3').verbose();
-const fs = require('fs');
-const path = require('path');
+import sqlite3 from 'sqlite3';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Crear y exportar la conexión a la base de datos
-const db = new sqlite3.Database('./database.db', (err) => {
+const db = new (sqlite3.verbose()).Database('./database.db', (err) => {
     if (err) {
         console.error('Error al conectar con la base de datos:', err.message);
     } else {
@@ -23,4 +27,4 @@ db.exec(schema, (err) => {
     }
 });
 
-module.exports = db;
+export default db;

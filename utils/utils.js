@@ -1,7 +1,7 @@
-const db = require('../database');
+import db from '../database.js';
 
 // Obtener un usuario por teléfono
-const getUserByPhone = async (telefono) => {
+export const getUserByPhone = async (telefono) => {
     console.log("Buscando usuario con teléfono:", telefono); // Registro inicial
     return new Promise((resolve, reject) => {
         db.get(
@@ -24,8 +24,8 @@ const getUserByPhone = async (telefono) => {
 };
 
 // Guardar un usuario
-const saveUser = async ({ nombre, telefono, correo }) => {
-    console.log("Datos recibidos en saveUser:", { nombre, telefono, correo }); // Agrega este log
+export const saveUser = async (telefono, nombre, correo) => {
+    console.log("Datos recibidos en saveUser:", { telefono, nombre, correo });
     return new Promise((resolve, reject) => {
         db.run(
             `INSERT INTO usuarios (nombre, telefono, correo) VALUES (?, ?, ?)`,
@@ -41,7 +41,31 @@ const saveUser = async ({ nombre, telefono, correo }) => {
     });
 };
 
-module.exports = {
-    getUserByPhone,
-    saveUser,
+// Guardar una consulta
+export const saveConsulta = async (usuario_id, pasajeros, meses_disponibles, duracion, destino) => {
+    console.log("Guardando consulta:", { usuario_id, pasajeros, meses_disponibles, duracion, destino });
+    return new Promise((resolve, reject) => {
+        db.run(
+            `INSERT INTO consultas (usuario_id, pasajeros, meses_disponibles, duracion, destino) VALUES (?, ?, ?, ?, ?)`,
+            [usuario_id, pasajeros, meses_disponibles, duracion, destino],
+            (err) => {
+                if (err) {
+                    console.error("Error guardando consulta:", err.message);
+                    return reject(err);
+                }
+                console.log("✅ Consulta guardada correctamente en la base de datos");
+                resolve();
+            }
+        );
+    });
+};
+
+// Función para enviar mensajes
+export const sendMessage = async (sock, to, text) => {
+    try {
+        await sock.sendMessage(to, { text });
+        console.log(`✅ Mensaje enviado a ${to.split('@')[0]}`);
+    } catch (error) {
+        console.error('❌ Error enviando mensaje:', error);
+    }
 };
