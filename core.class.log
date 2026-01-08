@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5493875051112@s.whatsapp.net',
     fromMe: false,
-    id: '2A61E53F841DD653C284',
+    id: '2A70E066402BC374FF1B',
     participant: undefined
   },
-  messageTimestamp: 1767881836,
+  messageTimestamp: 1767899824,
   pushName: 'Diego',
   broadcast: false,
   message: Message {
@@ -16,13 +16,14 @@
       messageSecret: [Uint8Array]
     }
   },
+  verifiedBizName: 'Diego',
   body: 'Hola',
   from: '5493875051112'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_08507e23-dc80-478b-9838-198879383312',
-  keyword: 'key_67095d43-438c-4604-95e3-da22a6c46e6f',
-  answer: '__call_action__',
+  ref: 'ans_642296e5-fdfb-408a-98d2-e55ebc6ae1da',
+  keyword: 'key_bbf5cc9c-1e57-4868-85bf-6ce8cae894c8',
+  answer: '👋 ¡Bienvenido a *UBM Viajes*!',
   options: {
     media: null,
     buttons: [],
@@ -35,53 +36,5 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '70bbe6df99e51492948ad4784babbeef'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '42997018267799@lid',
-    fromMe: false,
-    id: 'AC8DD9B85C8F4DD4E3D69353737852FA',
-    participant: undefined
-  },
-  messageTimestamp: 1767881934,
-  pushName: 'Eugenia Orlovas UBM',
-  broadcast: false,
-  message: Message {
-    conversation: 'Hola',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'Hola',
-  from: '42997018267799@lid'
-}
-[ERROR ID (5bcee9c9-f4c0-4dff-bf80-c53e2193b68f)]:  Error: Timed Out
-    at /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/generics.js:137:32 {
-  data: {
-    stack: 'Error\n' +
-      '    at promiseTimeout (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/generics.js:132:19)\n' +
-      '    at waitForMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:114:53)\n' +
-      '    at query (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:136:22)\n' +
-      '    at getUSyncDevices (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:166:30)\n' +
-      '    at /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:357:53\n' +
-      '    at Object.transaction (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Utils/auth-utils.js:136:32)\n' +
-      '    at relayMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:279:30)\n' +
-      '    at Object.sendMessage (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:652:23)\n' +
-      '    at async CoreClass.sendProviderAndSave (/Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@bot-whatsapp/bot/lib/bundle.bot.cjs:1561:21)\n' +
-      '    at async /Users/diegobruno/Documents/Programacion/UBM-BOT-WhatsApp/node_modules/@bot-whatsapp/bot/lib/bundle.bot.cjs:1371:21'
-  },
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 408,
-    payload: {
-      statusCode: 408,
-      error: 'Request Time-out',
-      message: 'Timed Out'
-    },
-    headers: {}
-  }
+  refSerialize: 'a216c47d320fe8be26e212a21d4a7de8'
 }

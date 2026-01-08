@@ -1,30 +1,27 @@
-const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot');
+const { createBot, createProvider, createFlow } = require('@bot-whatsapp/bot');
 require("dotenv").config();
 
 const QRPortalWeb = require('@bot-whatsapp/portal');
 const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/mock');
-const { delay } = require('@whiskeysockets/baileys');
 const db = require('./database');
-const path = require('path');
 const qrcode = require('qrcode-terminal');
 
-
 // Flujos
+const flowTest = require('./flows/test');
 const flowAdmin = require('./flows/admin');
 const flowInicio = require('./flows/inicio');
+const flowRegistro = require('./flows/registro');
 const menuFlow = require('./flows/menu');
 const flowUbicacion = require('./flows/ubicacion');
 const flowConsultas = require('./flows/consultas');
 
-//FLUJOS NOVEDADES
+// FLUJOS NOVEDADES
 const flowNovedades = require('./flows/novedades');
 const flowFormula1 = require('./flows/formula1');
 const flowMundialClubes = require('./flows/mundialClubes');
 
-
-
-//FLUJO ENJOY 15
+// FLUJO ENJOY 15
 const flowTus15 = require('./flows/flowTus15');
 const flowVip = require('./flows/enjoy15/flowVip');
 const flowPremium = require('./flows/enjoy15/flowPremium');
@@ -48,19 +45,16 @@ const flowMexico = require('./flows/RestoDelMundo/flowMexico');
 const flowUsa = require('./flows/RestoDelMundo/flowUsa');
 const flowAsia = require('./flows/RestoDelMundo/flowAsia');
 const espanaPortugalMarruecos = require('./flows/RestoDelMundo/flowEspanaPortugalMarruecos');
-
 const flowTurquiaYEgeo = require('./flows/flowTurquiaYEgeo');
-
-
-
-
 
 // Inicialización del bot
 const main = async () => {
     const adapterDB = new MockAdapter();
     const adapterFlow = createFlow([
+        flowTest,
         flowAdmin,
         flowInicio,
+        flowRegistro,
         menuFlow,
         flowConsultas,
         flowUbicacion,
@@ -90,7 +84,6 @@ const main = async () => {
     ]);
 
     const adapterProvider = createProvider(BaileysProvider, {
-        // Opciones adicionales para Baileys
         browser: ['Bot', 'Chrome', '1.0.0'],
         syncFullHistory: false,
         markOnlineOnConnect: false
@@ -124,19 +117,12 @@ const main = async () => {
 };
 
 // ⚠️ HANDLERS GLOBALES DE ERRORES ⚠️
-// Capturar promesas rechazadas no manejadas
 process.on('unhandledRejection', (reason, promise) => {
-    console.error('❌❌❌ [GLOBAL] UNHANDLED REJECTION ❌❌❌');
-    console.error('Reason:', reason);
-    console.error('Promise:', promise);
-    // NO hacer process.exit() para que el bot siga funcionando
+    console.error('[ERROR] Unhandled Rejection:', reason);
 });
 
-// Capturar excepciones no capturadas
 process.on('uncaughtException', (error) => {
-    console.error('❌❌❌ [GLOBAL] UNCAUGHT EXCEPTION ❌❌❌');
-    console.error('Error:', error);
-    // NO hacer process.exit() para que el bot siga funcionando
+    console.error('[ERROR] Uncaught Exception:', error);
 });
 
 main();
