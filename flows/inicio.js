@@ -27,11 +27,10 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                 console.log('🔍 [flowInicio] Redirigiendo al menú...');
                 return gotoFlow(menuFlow);
             } else {
-                console.log('⚠️ [flowInicio] Usuario NO encontrado, iniciando registro...');
+                console.log('⚠️ [flowInicio] Usuario NO encontrado, continuando con registro...');
                 tempData[userId] = {};
-                console.log('🔍 [flowInicio] tempData inicializado:', tempData[userId]);
-                const mensajeEnviado = await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
-                console.log('✅ [flowInicio] Mensaje de bienvenida enviado:', mensajeEnviado);
+                console.log('🔍 [flowInicio] tempData inicializado para:', userId);
+                // NO hacemos flowDynamic aquí, dejamos que continúe al siguiente addAnswer
             }
         } catch (err) {
             console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
@@ -43,6 +42,7 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
         }
     })
     .addAnswer(
+        "👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.\n\n" +
         "✏️ Escribe tu *nombre completo*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
