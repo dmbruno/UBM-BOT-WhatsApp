@@ -7,12 +7,14 @@ const tempData = {};
 
 const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
     .addAction(async (ctx, { flowDynamic, gotoFlow }) => {
-        const userId = ctx.from;
+        // Normalizar el userId (remover @lid, @s.whatsapp.net, etc.)
+        const rawUserId = ctx.from;
+        const userId = rawUserId.split('@')[0]; // Solo el número
         
         console.log('🔍 [flowInicio] ======== INICIO DEL FLUJO ========');
-        console.log('🔍 [flowInicio] Usuario ID:', userId);
+        console.log('🔍 [flowInicio] Raw User ID:', rawUserId);
+        console.log('🔍 [flowInicio] Normalized User ID:', userId);
         console.log('🔍 [flowInicio] Mensaje recibido:', ctx.body);
-        console.log('🔍 [flowInicio] Contexto completo:', JSON.stringify(ctx, null, 2));
         
         try {
             console.log('🔍 [flowInicio] Intentando buscar usuario en DB...');
@@ -33,7 +35,10 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
             }
         } catch (err) {
             console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
-            console.error("❌ [flowInicio] Stack trace:", err.stack);
+            console.error("❌ [flowInicio] Error completo:", JSON.stringify(err, null, 2));
+            if (err && err.stack) {
+                console.error("❌ [flowInicio] Stack trace:", err.stack);
+            }
             await flowDynamic("⚠️ Hubo un problema procesando tu solicitud. Por favor, inténtalo más tarde.");
         }
     })
@@ -42,7 +47,8 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
         { capture: true },
         async (ctx, { flowDynamic }) => {
             const nombre = ctx.body?.trim();
-            const userId = ctx.from;
+            const rawUserId = ctx.from;
+            const userId = rawUserId.split('@')[0]; // Normalizar
 
             console.log('📝 [flowInicio] Capturando nombre...');
             console.log('📝 [flowInicio] Usuario ID:', userId);
@@ -66,7 +72,8 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
         { capture: true },
         async (ctx, { flowDynamic, gotoFlow }) => {
             const correo = ctx.body?.trim().toLowerCase();
-            const userId = ctx.from;
+            const rawUserId = ctx.from;
+            const userId = rawUserId.split('@')[0]; // Normalizar
 
             console.log('📧 [flowInicio] Capturando correo...');
             console.log('📧 [flowInicio] Usuario ID:', userId);
