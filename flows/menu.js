@@ -22,34 +22,40 @@ const menuFlow = addKeyword(["Menu", "Menú", "menu", "menú"]).addAnswer(
     "✍️ Escribe el *número* de la opción que te interesa, y te ayudaremos con gusto.",
     { capture: true },
     async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
-        const input = ctx.body.trim().toLowerCase();
+        console.log('📋 [menu] Opción recibida:', ctx.body);
+        
+        try {
+            const input = ctx.body.trim().toLowerCase();
 
-        // Validar si el input es 'admin'
-        if (input === "admin") {
-            return gotoFlow(flowAdmin); // Flujo de administrador
-        }
+            // Validar si el input es 'admin'
+            if (input === "admin") {
+                console.log('🔐 [menu] Admin acceso');
+                return gotoFlow(flowAdmin);
+            }
 
-        // Validar si la entrada es una opción válida
-        if (!["1", "2", "3", "4", "0"].includes(ctx.body.trim())) {
-            return fallBack(
-                "⚠️ Respuesta no válida. Por favor selecciona una de las opciones."
-            );
-        }
+            // Validar si la entrada es una opción válida
+            if (!["1", "2", "3", "4", "0"].includes(ctx.body.trim())) {
+                console.log('⚠️ [menu] Opción inválida');
+                return fallBack("⚠️ Respuesta no válida. Por favor selecciona una de las opciones.");
+            }
 
-        // Redirigir al flujo correspondiente según la opción seleccionada
-        switch (ctx.body.trim()) {
-            case "1":
-                return gotoFlow(flowConsultas); // Flujo de consultas
-            case "2":
-                return gotoFlow(flowUbicacion); // Flujo de ubicación
-            case "3":
-                return gotoFlow(flowTus15); // Flujo para "Tus 15 con UBM"
-            case "4":
-                return gotoFlow(europaFlow); // Flujo para "UBM Ola EUROPA"
-            case "0":
-                return await flowDynamic(
-                    "🔄 Saliendo... Puedes volver a este menú escribiendo '*menu*'"
-                );
+            // Redirigir al flujo correspondiente según la opción seleccionada
+            console.log('✅ [menu] Redirigiendo a opción:', ctx.body.trim());
+            switch (ctx.body.trim()) {
+                case "1":
+                    return gotoFlow(flowConsultas);
+                case "2":
+                    return gotoFlow(flowUbicacion);
+                case "3":
+                    return gotoFlow(flowTus15);
+                case "4":
+                    return gotoFlow(europaFlow);
+                case "0":
+                    return await flowDynamic("🔄 Saliendo... Puedes volver a este menú escribiendo '*menu*'");
+            }
+        } catch (err) {
+            console.error('❌ [menu] Error:', err?.message || err);
+            await flowDynamic("⚠️ Hubo un problema. Escribe *menu* para intentar de nuevo.");
         }
     }
 );

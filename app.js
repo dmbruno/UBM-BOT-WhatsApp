@@ -123,4 +123,20 @@ const main = async () => {
     QRPortalWeb();
 };
 
+// ⚠️ HANDLERS GLOBALES DE ERRORES ⚠️
+// Capturar promesas rechazadas no manejadas
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❌❌❌ [GLOBAL] UNHANDLED REJECTION ❌❌❌');
+    console.error('Reason:', reason);
+    console.error('Promise:', promise);
+    // NO hacer process.exit() para que el bot siga funcionando
+});
+
+// Capturar excepciones no capturadas
+process.on('uncaughtException', (error) => {
+    console.error('❌❌❌ [GLOBAL] UNCAUGHT EXCEPTION ❌❌❌');
+    console.error('Error:', error);
+    // NO hacer process.exit() para que el bot siga funcionando
+});
+
 main();
