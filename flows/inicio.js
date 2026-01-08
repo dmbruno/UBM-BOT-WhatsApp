@@ -30,8 +30,8 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                 console.log('⚠️ [flowInicio] Usuario NO encontrado, iniciando registro...');
                 tempData[userId] = {};
                 console.log('🔍 [flowInicio] tempData inicializado:', tempData[userId]);
-                await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
-                console.log('✅ [flowInicio] Mensaje de bienvenida enviado');
+                const mensajeEnviado = await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
+                console.log('✅ [flowInicio] Mensaje de bienvenida enviado:', mensajeEnviado);
             }
         } catch (err) {
             console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
