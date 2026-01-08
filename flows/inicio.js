@@ -9,7 +9,7 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
     .addAnswer(
         "👋 ¡Hola! Bienvenido a *UBM Viajes*",
         null,
-        async (ctx, { flowDynamic }) => {
+        async (ctx, { flowDynamic, gotoFlow, endFlow }) => {
             console.log('🎬 [flowInicio] Inicio');
             
             try {
@@ -17,8 +17,8 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                 console.log('🔍 [flowInicio] Usuario:', userId);
                 
                 if (!userId) {
-                    console.error('❌ [flowInicio] userId indefinido0');
-                    return;
+                    console.error('❌ [flowInicio] userId indefinido');
+                    return endFlow();
                 }
                 
                 const user = await getUserByPhone(userId);
@@ -28,16 +28,18 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
                     console.log('✅ [flowInicio] Usuario registrado');
                     await flowDynamic(`¡Hola *${user.nombre}*! 👋`);
                     await flowDynamic("Escribe *menu* para ver las opciones disponibles.");
-                    return;
+                    return endFlow(); // Terminar aquí, NO continuar al siguiente addAnswer
                 }
                 
-                // Usuario nuevo
-                console.log('⚠️ [flowInicio] Nuevo usuario, registro');
+                // Usuario nuevo - NO HACER RETURN, dejar que continúe al siguiente addAnswer
+                console.log('⚠️ [flowInicio] Nuevo usuario, iniciar registro');
                 tempData[userId] = {};
                 await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para registrarte.");
+                // NO hacer return ni endFlow() - el flujo DEBE continuar
                 
             } catch (err) {
                 console.error("❌ [flowInicio] Error:", err?.message || err);
+                return endFlow();
             }
         }
     )
