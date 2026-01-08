@@ -5,25 +5,35 @@ const menuFlow = require('./menu'); // Importamos el menú principal
 // Variable global temporal para almacenar datos
 const tempData = {};
 
-const flowInicio = addKeyword(['hola', 'hello', 'buenas'])
+const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
     .addAction(async (ctx, { flowDynamic, gotoFlow }) => {
-        const userId = ctx.from; // Número de teléfono del usuario
+        const userId = ctx.from;
+        
+        console.log('🔍 [flowInicio] ======== INICIO DEL FLUJO ========');
+        console.log('🔍 [flowInicio] Usuario ID:', userId);
+        console.log('🔍 [flowInicio] Mensaje recibido:', ctx.body);
+        console.log('🔍 [flowInicio] Contexto completo:', JSON.stringify(ctx, null, 2));
+        
         try {
-            // Verificar si el usuario ya está en la base de datos
+            console.log('🔍 [flowInicio] Intentando buscar usuario en DB...');
             const user = await getUserByPhone(userId);
+            console.log('🔍 [flowInicio] Resultado de búsqueda:', user);
 
             if (user) {
-                // Si el usuario existe, lo saludamos y mostramos el menú principal
+                console.log('✅ [flowInicio] Usuario encontrado:', user.nombre);
                 await flowDynamic(`¡Hola *${user.nombre}*! 👋 ¿En qué puedo ayudarte hoy?`);
-                return gotoFlow(menuFlow); // Redirige al menú principal directamente
+                console.log('🔍 [flowInicio] Redirigiendo al menú...');
+                return gotoFlow(menuFlow);
             } else {
-                // Si el usuario no existe, inicializamos la sesión y empezamos el registro
-                ctx.session = ctx.session || {};
-                tempData[userId] = {}; // Inicializamos datos temporales
+                console.log('⚠️ [flowInicio] Usuario NO encontrado, iniciando registro...');
+                tempData[userId] = {};
+                console.log('🔍 [flowInicio] tempData inicializado:', tempData[userId]);
                 await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
+                console.log('✅ [flowInicio] Mensaje de bienvenida enviado');
             }
         } catch (err) {
-            console.error("Error en el flujo de inicio:", err && err.message ? err.message : err);
+            console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
+            console.error("❌ [flowInicio] Stack trace:", err.stack);
             await flowDynamic("⚠️ Hubo un problema procesando tu solicitud. Por favor, inténtalo más tarde.");
         }
     })
@@ -34,50 +44,66 @@ const flowInicio = addKeyword(['hola', 'hello', 'buenas'])
             const nombre = ctx.body?.trim();
             const userId = ctx.from;
 
-            if (!nombre) {
+            console.log('📝 [flowInicio] Capturando nombre...');
+            console.log('📝 [flowInicio] Usuario ID:', userId);
+            console.log('📝 [flowInicio] Nombre recibido:', nombre);
+
+            if (!nombre || nombre.length < 2) {
+                console.log('⚠️ [flowInicio] Nombre inválido');
                 await flowDynamic("⚠️ Por favor, ingresa un nombre válido.");
                 return;
             }
 
-            // Guardar el nombre temporalmente en la sesión o en datos temporales
-            ctx.session = ctx.session || {};
-            ctx.session.nombre = nombre;
+            tempData[userId] = tempData[userId] || {};
             tempData[userId].nombre = nombre;
+            console.log('✅ [flowInicio] Nombre guardado en tempData:', tempData[userId]);
 
-            await flowDynamic("🚀 Para finalizar el *registro*.");
+            await flowDynamic(`Perfecto *${nombre}*! 🚀 Para finalizar el *registro*.`);
         }
     )
     .addAnswer(
         "✉️ Escribe tu *correo electrónico*:",
         { capture: true },
         async (ctx, { flowDynamic, gotoFlow }) => {
-            const correo = ctx.body?.trim();
+            const correo = ctx.body?.trim().toLowerCase();
             const userId = ctx.from;
 
-            if (!correo || !correo.includes("@")) {
-                await flowDynamic("⚠️ El correo no es válido. Por favor, escribe un correo electrónico válido.");
+            console.log('📧 [flowInicio] Capturando correo...');
+            console.log('📧 [flowInicio] Usuario ID:', userId);
+            console.log('📧 [flowInicio] Correo recibido:', correo);
+
+            if (!correo || !correo.includes("@") || !correo.includes(".")) {
+                console.log('⚠️ [flowInicio] Correo inválido');
+                await flowDynamic("⚠️ El correo no es válido. Por favor, escribe un correo electrónico válido (ejemplo: nombre@email.com).");
                 return;
             }
 
             try {
-                // Recuperar nombre desde sesión o datos temporales
-                const nombre = ctx.session?.nombre || tempData[userId]?.nombre;
+                const nombre = tempData[userId]?.nombre;
+                console.log('🔍 [flowInicio] Nombre recuperado de tempData:', nombre);
 
                 if (!nombre) {
-                    await flowDynamic("⚠️ No se encontró tu nombre. Por favor, comienza de nuevo.");
+                    console.error('❌ [flowInicio] Nombre no encontrado en tempData');
+                    console.error('❌ [flowInicio] tempData actual:', JSON.stringify(tempData, null, 2));
+                    await flowDynamic("⚠️ No se encontró tu nombre. Por favor, escribe *hola* para comenzar de nuevo.");
                     return;
                 }
 
-                // Guardar usuario en la base de datos
+                console.log('💾 [flowInicio] Guardando usuario en DB...');
+                console.log('💾 [flowInicio] Datos:', { nombre, telefono: userId, correo });
+
                 await saveUser({ nombre, telefono: userId, correo });
 
-                // Limpiar datos temporales
                 delete tempData[userId];
+                console.log('✅ [flowInicio] Usuario guardado y tempData limpiado');
 
                 await flowDynamic(`¡Gracias, *${nombre}*! 🎉 Ahora estás registrado con el correo *${correo}*.`);
-                return gotoFlow(menuFlow); // Redirige al flujo de menú
+                
+                console.log('🔍 [flowInicio] Redirigiendo al menú...');
+                return gotoFlow(menuFlow);
             } catch (err) {
-                console.error("Error guardando usuario:", err.message);
+                console.error("❌ [flowInicio] Error guardando usuario:", err);
+                console.error("❌ [flowInicio] Stack trace:", err.stack);
                 await flowDynamic("⚠️ Hubo un problema al guardar tus datos. Por favor, inténtalo más tarde.");
             }
         }
