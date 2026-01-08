@@ -6,43 +6,47 @@ const menuFlow = require('./menu'); // Importamos el menú principal
 const tempData = {};
 
 const flowInicio = addKeyword(['hola', 'hello', 'buenas', 'menu', 'inicio'])
-    .addAction(async (ctx, { flowDynamic, gotoFlow }) => {
-        // Normalizar el userId (remover @lid, @s.whatsapp.net, etc.)
-        const rawUserId = ctx.from;
-        const userId = rawUserId.split('@')[0]; // Solo el número
-        
-        console.log('🔍 [flowInicio] ======== INICIO DEL FLUJO ========');
-        console.log('🔍 [flowInicio] Raw User ID:', rawUserId);
-        console.log('🔍 [flowInicio] Normalized User ID:', userId);
-        console.log('🔍 [flowInicio] Mensaje recibido:', ctx.body);
-        
-        try {
-            console.log('🔍 [flowInicio] Intentando buscar usuario en DB...');
-            const user = await getUserByPhone(userId);
-            console.log('🔍 [flowInicio] Resultado de búsqueda:', user);
-
-            if (user) {
-                console.log('✅ [flowInicio] Usuario encontrado:', user.nombre);
-                await flowDynamic(`¡Hola *${user.nombre}*! 👋 ¿En qué puedo ayudarte hoy?`);
-                console.log('🔍 [flowInicio] Redirigiendo al menú...');
-                return gotoFlow(menuFlow);
-            } else {
-                console.log('⚠️ [flowInicio] Usuario NO encontrado, continuando con registro...');
-                tempData[userId] = {};
-                console.log('🔍 [flowInicio] tempData inicializado para:', userId);
-                // NO hacemos flowDynamic aquí, dejamos que continúe al siguiente addAnswer
-            }
-        } catch (err) {
-            console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
-            console.error("❌ [flowInicio] Error completo:", JSON.stringify(err, null, 2));
-            if (err && err.stack) {
-                console.error("❌ [flowInicio] Stack trace:", err.stack);
-            }
-            await flowDynamic("⚠️ Hubo un problema procesando tu solicitud. Por favor, inténtalo más tarde.");
-        }
-    })
     .addAnswer(
-        "👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.\n\n" +
+        "👋 ¡Hola! Bienvenido a *UBM Viajes*",
+        null,
+        async (ctx, { flowDynamic, gotoFlow }) => {
+            // Normalizar el userId (remover @lid, @s.whatsapp.net, etc.)
+            const rawUserId = ctx.from;
+            const userId = rawUserId.split('@')[0]; // Solo el número
+            
+            console.log('🔍 [flowInicio] ======== INICIO DEL FLUJO ========');
+            console.log('🔍 [flowInicio] Raw User ID:', rawUserId);
+            console.log('🔍 [flowInicio] Normalized User ID:', userId);
+            console.log('🔍 [flowInicio] Mensaje recibido:', ctx.body);
+            
+            try {
+                console.log('🔍 [flowInicio] Intentando buscar usuario en DB...');
+                const user = await getUserByPhone(userId);
+                console.log('🔍 [flowInicio] Resultado de búsqueda:', user);
+
+                if (user) {
+                    console.log('✅ [flowInicio] Usuario encontrado:', user.nombre);
+                    await flowDynamic(`¡Hola *${user.nombre}*! 👋 ¿En qué puedo ayudarte hoy?`);
+                    console.log('🔍 [flowInicio] Redirigiendo al menú...');
+                    return gotoFlow(menuFlow);
+                } else {
+                    console.log('⚠️ [flowInicio] Usuario NO encontrado, iniciando registro...');
+                    tempData[userId] = {};
+                    console.log('🔍 [flowInicio] tempData inicializado para:', userId);
+                    await flowDynamic("👤 Parece que eres nuevo aquí. Te voy a pedir unos datos para *registrarte*.");
+                    // NO hacemos return, el flujo continúa al siguiente addAnswer
+                }
+            } catch (err) {
+                console.error("❌ [flowInicio] ERROR CRÍTICO:", err);
+                console.error("❌ [flowInicio] Error completo:", JSON.stringify(err, null, 2));
+                if (err && err.stack) {
+                    console.error("❌ [flowInicio] Stack trace:", err.stack);
+                }
+                await flowDynamic("⚠️ Hubo un problema procesando tu solicitud. Por favor, inténtalo más tarde.");
+            }
+        }
+    )
+    .addAnswer(
         "✏️ Escribe tu *nombre completo*:",
         { capture: true },
         async (ctx, { flowDynamic }) => {
