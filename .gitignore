@@ -19,5 +19,7 @@ node_modules/
 # Archivos temporales
 *.tmp
 .DS_Store
+session.tar.gz
+session_encoded.txt
 
-#auth_info_baileys/  # TEMPORAL - Solo para primer deploy
+auth_info_baileys/
