@@ -35,7 +35,7 @@ export async function handleMessage(sock, message) {
         // ==========================================
         // FLUJO PRINCIPAL: Palabras clave
         // ==========================================
-        const keywords = ['hola', 'hello', 'buenas', 'menu', 'inicio'];
+        const keywords = ['hola', 'hello', 'buenas', 'menu','Menú','Menu','menú', 'inicio'];
         
         if (keywords.includes(normalizedText)) {
             const user = await getUserByPhone(userId);
