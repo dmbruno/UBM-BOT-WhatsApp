@@ -3,7 +3,11 @@
     "version": "1.0.0",
     "type": "module",
     "description": "Bot WhatsApp UBM Viajes con Baileys 7.x + ESM",
-    "main": "app-baileys-pure.js",
+    "main": "app.js",
+    "engines": {
+        "node": ">=20.0.0",
+        "npm": ">=10.0.0"
+    },
     "scripts": {
         "pre-copy": "cd .. && npm run  copy.lib base-baileys-memory",
         "start": "node app.js",
