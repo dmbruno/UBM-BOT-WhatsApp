@@ -1,52 +1,48 @@
-// ==========================================
-// UBM VIAJES BOT - BAILEYS 7.X MODULAR
-// ==========================================
-// Arquitectura modular para fácil mantenimiento
-// Cada flujo está en su propio archivo
-
 import makeWASocket, { 
     DisconnectReason, 
     useMultiFileAuthState,
-    Browsers
+    fetchLatestBaileysVersion,
+    makeCacheableSignalKeyStore
 } from '@whiskeysockets/baileys';
 import { Boom } from '@hapi/boom';
 import pino from 'pino';
 import qrcode from 'qrcode-terminal';
+import db from './database.js';
 import { handleMessage } from './handlers/messageHandler.js';
 
-// ==========================================
-// CONFIGURACIÓN
-// ==========================================
-const AUTH_PATH = './bot_sessions';
-const logger = pino({ level: 'silent' });
+console.log('🚀 Iniciando UBM Viajes Bot con Baileys 7.x (Arquitectura Modular)...\n');
 
-// Estado global de conversaciones
-export const conversationState = {};
-
-// ==========================================
-// FUNCIÓN PRINCIPAL DE CONEXIÓN
-// ==========================================
-async function connectToWhatsApp() {
-    const { state, saveCreds } = await useMultiFileAuthState(AUTH_PATH);
+// Función principal para iniciar el bot
+async function startBot() {
+    const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys');
+    const { version, isLatest } = await fetchLatestBaileysVersion();
+    
+    console.log(`📱 Usando WhatsApp Web v${version.join('.')}, ${isLatest ? 'última versión' : 'versión antigua'}`);
 
     const sock = makeWASocket({
-        auth: state,
-        printQRInTerminal: false,
-        logger,
-        browser: Browsers.ubuntu('Chrome'),
-        generateHighQualityLinkPreview: true
+        version,
+        logger: pino({ level: 'silent' }),
+        printQRInTerminal: true,
+        auth: {
+            creds: state.creds,
+            keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'silent' })),
+        },
+        browser: ['UBM Viajes Bot', 'Chrome', '120.0.0'],
+        markOnlineOnConnect: true,
+        generateHighQualityLinkPreview: true,
     });
 
-    // ==========================================
-    // EVENT: Actualización de conexión
-    // ==========================================
+    // Manejar actualización de credenciales
+    sock.ev.on('creds.update', saveCreds);
+
+    // Manejar conexión/desconexión
     sock.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect, qr } = update;
 
         if (qr) {
-            console.log('\n📱 ===== ESCANEA ESTE QR CON WHATSAPP =====\n');
+            console.log('\n📱 Escanea este código QR con WhatsApp:\n');
             qrcode.generate(qr, { small: true });
-            console.log('\n==========================================\n');
+            console.log('\n⏳ Esperando escaneo...\n');
         }
 
         if (connection === 'close') {
@@ -57,56 +53,74 @@ async function connectToWhatsApp() {
             console.log('❌ Conexión cerrada. Reconectando:', shouldReconnect);
 
             if (shouldReconnect) {
-                connectToWhatsApp();
+                console.log('🔄 Reconectando en 5 segundos...');
+                setTimeout(() => startBot(), 5000);
+            } else {
+                console.log('🚪 Sesión cerrada. Elimina auth_info_baileys/ y reinicia.');
+                process.exit(0);
             }
         } else if (connection === 'open') {
-            console.log('✅ BOT CONECTADO CON BAILEYS 7.X - ARQUITECTURA MODULAR');
-            console.log('🌍 UBM Viajes - Sistema activo');
-            console.log('📱 Soporte completo para LIDs y PNs');
-            console.log('📁 Estructura modular para fácil mantenimiento');
-            console.log('👂 Escuchando mensajes...\n');
+            console.log('✅ Bot conectado exitosamente!');
+            console.log('📞 Número:', sock.user?.id);
+            console.log('👤 Nombre:', sock.user?.name);
+            console.log('\n🤖 Bot listo para recibir mensajes...\n');
+        } else if (connection === 'connecting') {
+            console.log('🔌 Conectando a WhatsApp...');
         }
     });
 
-    // Guardar credenciales cuando cambien
-    sock.ev.on('creds.update', saveCreds);
-
-    // ==========================================
-    // EVENT: Nuevos mapeos LID <-> PN
-    // ==========================================
-    sock.ev.on('lid-mapping.update', (mapping) => {
-        console.log('🔄 Nuevo mapeo LID detectado:', mapping);
-    });
-
-    // ==========================================
-    // EVENT: Mensajes entrantes
-    // ==========================================
+    // Manejar mensajes entrantes
     sock.ev.on('messages.upsert', async ({ messages, type }) => {
         if (type !== 'notify') return;
 
         for (const message of messages) {
-            // Ignorar mensajes propios y de grupos
-            if (message.key.fromMe || message.key.remoteJid.endsWith('@g.us')) continue;
+            // Ignorar mensajes propios
+            if (message.key.fromMe) continue;
 
-            // Delegar al handler de mensajes
-            await handleMessage(sock, message, conversationState);
+            // Ignorar mensajes de grupos por ahora (opcional)
+            // if (message.key.remoteJid.endsWith('@g.us')) continue;
+
+            try {
+                await handleMessage(sock, message);
+            } catch (error) {
+                console.error('❌ Error procesando mensaje:', error);
+            }
         }
+    });
+
+    // Manejar actualizaciones de presencia (opcional)
+    sock.ev.on('presence.update', ({ id, presences }) => {
+        // console.log(`👁️ Presencia actualizada: ${id}`, presences);
+    });
+
+    // Manejar grupos (opcional)
+    sock.ev.on('groups.update', (updates) => {
+        // console.log('📦 Grupos actualizados:', updates);
+    });
+
+    // Manejar contactos (opcional)
+    sock.ev.on('contacts.update', (updates) => {
+        // console.log('👥 Contactos actualizados:', updates.length);
+    });
+
+    // Graceful shutdown
+    process.on('SIGINT', async () => {
+        console.log('\n\n🛑 Cerrando bot...');
+        await sock?.end();
+        process.exit(0);
+    });
+
+    process.on('SIGTERM', async () => {
+        console.log('\n\n🛑 Cerrando bot...');
+        await sock?.end();
+        process.exit(0);
     });
 
     return sock;
 }
 
-// ==========================================
-// INICIAR BOT
-// ==========================================
-console.log('🚀 Iniciando UBM Viajes Bot con Baileys 7.x (Arquitectura Modular)...\n');
-connectToWhatsApp();
-
-// Manejar errores globales
-process.on('unhandledRejection', (reason) => {
-    console.error('[ERROR] Unhandled Rejection:', reason);
-});
-
-process.on('uncaughtException', (error) => {
-    console.error('[ERROR] Uncaught Exception:', error);
+// Iniciar el bot
+startBot().catch(err => {
+    console.error('💥 Error fatal al iniciar el bot:', err);
+    process.exit(1);
 });

@@ -6,7 +6,10 @@ import { handleConversationState } from './conversationHandler.js';
 import { showMenu } from '../flows-baileys/menu.js';
 import { sendMessage } from '../utils/utils.js';
 
-export async function handleMessage(sock, message, conversationState) {
+// Estado de conversaciones (en memoria)
+const conversationState = {};
+
+export async function handleMessage(sock, message) {
     try {
         const from = message.key.remoteJid;
         const text = message.message?.conversation || 
