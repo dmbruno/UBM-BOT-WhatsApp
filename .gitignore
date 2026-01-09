@@ -1,3 +1,4 @@
+#auth_info_baileys/
 # Archivos de sesión de Baileys
 bot_sessions/
 *.data.json
@@ -19,4 +20,3 @@ node_modules/
 # Archivos temporales
 *.tmp
 .DS_Store
-auth_info_baileys/
