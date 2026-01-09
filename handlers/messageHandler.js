@@ -35,9 +35,12 @@ export async function handleMessage(sock, message) {
         // ==========================================
         // FLUJO PRINCIPAL: Palabras clave
         // ==========================================
-        const keywords = ['hola', 'hello', 'buenas', 'menu','Menú','Menu','menú', 'inicio'];
+        const keywords = ['hola', 'hello', 'buenas', 'tardes' , 'noches', 'dias','menu', 'menú', 'inicio', 'hi', 'hey'];
         
-        if (keywords.includes(normalizedText)) {
+        // Buscar si alguna keyword está contenida en el mensaje
+        const hasKeyword = keywords.some(keyword => normalizedText.includes(keyword));
+        
+        if (hasKeyword) {
             const user = await getUserByPhone(userId);
 
             if (user) {
