@@ -1,8 +1,11 @@
 [phases.setup]
-nixPkgs = ["nodejs-20_x"]
+nixPkgs = ["nodejs-20_x", "openssl"]
 
 [phases.install]
-cmds = ["npm ci"]
+cmds = ["npm ci --include=dev"]
 
 [start]
 cmd = "node app.js"
+
+[variables]
+NODE_VERSION = "20.11.0"

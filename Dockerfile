@@ -1,7 +1,7 @@
-FROM node:18-bullseye as bot
+FROM node:20-bullseye as bot
 WORKDIR /app
 COPY package*.json ./
-RUN npm i
+RUN npm ci --include=dev
 COPY . .
 ARG RAILWAY_STATIC_URL
 ARG PUBLIC_URL
